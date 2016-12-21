@@ -243,3 +243,7 @@ hr{
 .transparent{
   background-color: transparent;
 }
+
+select :hover{
+  background-color: black;
+}
