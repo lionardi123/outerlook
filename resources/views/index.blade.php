@@ -22,7 +22,6 @@
       </form>
     </div>
   </div>
-
   <div class="container">
     <div class="section">
       <div class="about-us">
