@@ -10,6 +10,9 @@
   <link href="{{{ asset('/css/materialize.min.css') }}}
 " type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="{{{ asset('/css/style.css') }}}" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="{{{ asset('/js/materialize.min.js') }}}"></script>
+  <script src="/outerlook/resources/assets/js/init.js"></script>
 </head>
 <body>
   <nav role="navigation" class="transparent">
@@ -42,11 +45,5 @@
 
   </nav>
   @yield('content')
-  <!--  Scripts-->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="{{{ asset('/js/materialize.min.js') }}}
-"></script>
-  <script src="/outerlook/resources/assets/js/init.js"></script>
-
   </body>
 </html>
