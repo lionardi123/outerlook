@@ -78,6 +78,8 @@ footer.page-footer {
 
 }
 
+
+
 .dropdown{
   width: 250px;
   height: 100%;
@@ -186,6 +188,10 @@ footer.page-footer {
   background-color: #fce4d7;
 }
 
+.peach-text{
+  color :#fce4d7;
+}
+
 .form{
   background-color: white;
   margin-left:25%;
@@ -244,3 +250,10 @@ hr{
   background-color: transparent;
 }
 
+.categories-header{
+  min-height: 400px;
+  width: 100%;
+  height: auto;
+  font-family: 'Satisfy', cursive;
+  font-weight: normal;
+}

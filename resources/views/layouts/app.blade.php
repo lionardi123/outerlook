@@ -10,14 +10,16 @@
   <link href="{{{ asset('/css/materialize.min.css') }}}
 " type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="{{{ asset('/css/style.css') }}}" type="text/css" rel="stylesheet" media="screen,projection"/>
+  
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="{{{ asset('/js/materialize.min.js') }}}"></script>
   <script src="/outerlook/resources/assets/js/init.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
 </head>
 <body>
   <nav role="navigation" class="transparent">
     <div class="background">
-      <img src="/outerlook/resources/assets/image/OUTERLOOK-1.jpg">
+      <img src="{{{asset('/image/OUTERLOOK-1.jpg')}}}">
     </div>
     <div class="nav-wrapper container">
       <ul class="left hide-on-med-and-down">
@@ -42,7 +44,6 @@
       </ul>
       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
     </div>
-
   </nav>
   @yield('content')
   </body>
