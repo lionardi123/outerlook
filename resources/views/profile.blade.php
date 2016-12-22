@@ -73,7 +73,7 @@
 		</div>
 
 		{{-- SECTION RIGHT --}}
-		<div class="col s12 m7 l8">
+		<div class="col s12 m7 l8" style="padding-right: 0px;">
 			<div class="card-panel" style="height: auto;">
 				<h1>Portfolio</h1>
 				<div class="row">
