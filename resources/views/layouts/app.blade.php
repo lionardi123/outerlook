@@ -23,7 +23,7 @@
     <script src="{{{ asset('/js/init.js') }}}"></script>
     <!-- Modal Structure -->
     <div id="modal1" class="modal">
-        <form action="#" method="POST">
+        <form>
             <div class="modal-content">
                 <h3 class="center">Sign In<span class="dot">.</span></h3>
                 <div class="row">
@@ -52,7 +52,7 @@
             <div class="container">
                 <ul class="left hide-on-med-and-down">
                     <li>
-                        <a class="white-text" href="#">Home</a>
+                        <a class="white-text" href="{{url('/')}}">Home</a>
                     </li>
                     <li>
                         <a class="white-text" href="#">Book Online</a>
@@ -66,18 +66,18 @@
                         <a class="white-text" href="#modal1">Sign In</a>
                     </li>
                     <li>
-                        <a class="white-text" href="#modal1">Register</a>
+                        <a class="white-text" href="{{url('/register')}}">Register</a>
                     </li>
                 </ul>
 
                 <ul id="nav-mobile" class="side-nav peach">
-                    <li><a href="#">Home</a>
+                    <li><a href="{{url('/')}}">Home</a>
                     </li>
                     <li><a href="#">Book Online</a>
                     </li>
                     <li><a href="#">Sign In</a>
                     </li>
-                    <li><a href="#">Register</a>
+                    <li><a href="{{url('/register')}}">Register</a>
                     </li>
                 </ul>
                 <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>

@@ -315,3 +315,7 @@ input[type=text]:focus {
 #posted-by{
   font-size: 0.8rem;
 }
+
+.img-col{
+  height: 400px;
+}
