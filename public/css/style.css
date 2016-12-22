@@ -314,3 +314,11 @@ hr{
   color:gold;
   content: "\2605";
 }
+
+.modal .modal-footer {
+  border-radius: 0 0 2px 2px;
+  background-color: #fce4d7;
+  padding: 4px 6px;
+  height: 56px;
+  width: 100%;
+}
