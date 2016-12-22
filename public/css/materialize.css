@@ -3368,6 +3368,10 @@ input[type=range] + .thumb {
   }
 }
 
+.card-content{
+  padding: 0px;
+}
+
 .container .row {
   margin-left: -0.75rem;
   margin-right: -0.75rem;
