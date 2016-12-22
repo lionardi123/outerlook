@@ -46,27 +46,28 @@
             <div class="container">
                 <ul class="left hide-on-med-and-down">
                     <li>
-                        <a class="custom-pink-text" href="#">Home</a>
+                        <a class="white-text" href="#">Home</a>
                     </li>
                     <li>
-                        <a class="custom-pink-text" href="#">Book Online</a>
+                        <a class="white-text" href="#">Book Online</a>
                     </li>
                 </ul>
                 <ul class="right hide-on-med-and-down">
-                    <li><a class="custom-pink-text" href="#modal1">Sign In</a>
+                    <li>
+                        <a href="#"></a>
                     </li>
-                    <li><a class="custom-pink-text" href="#modal1">Register</a>
+                    <li>
+                        <a class="white-text" href="#modal1">Sign In</a>
+                    </li>
+                    <li>
+                        <a class="white-text" href="#modal1">Register</a>
                     </li>
                 </ul>
 
                 <ul id="nav-mobile" class="side-nav peach">
                     <li><a href="#">Home</a>
                     </li>
-                    <li><a href="#">Categories</a>
-                    </li>
                     <li><a href="#">Book Online</a>
-                    </li>
-                    <li><a href="#">Terms and Conditions</a>
                     </li>
                     <li><a href="#">Sign In</a>
                     </li>

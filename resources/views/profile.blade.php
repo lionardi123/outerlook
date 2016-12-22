@@ -50,9 +50,6 @@
 				</div>
 				<div class="card-content">
 					<span class="card-title activator grey-text text-darken-4">Vembru<i class="material-icons right">more_vert</i></span>
-					<p>
-						<a class="custom-pink light black-text btn" href="#">Book</a>
-					</p>
 				</div>
 				<div class="card-reveal">
 					<span class="card-title grey-text text-darken-4">About me<i class="material-icons right">close</i></span>
@@ -66,44 +63,42 @@
 				</div>
 			</div>
 			<div class="collection">
-				<a href="#!" class="collection-item black-text">Make Up Wedding<span class="new badge custom-pink black-text" data-badge-caption="">Rp. 200000</span></a>
-				<a href="#!" class="collection-item black-text">Fermak Muka<span class="new badge custom-pink black-text" data-badge-caption="">Rp. 200000</span></a>
-				<a href="#!" class="collection-item black-text">Teman malam<span class="new badge custom-pink black-text" data-badge-caption="">Rp. 200000</span></a>
-				<a href="#!" class="collection-item black-text">Teman siang<span class="new badge custom-pink black-text" data-badge-caption="">Rp. 200000</span></a>
+				<a href="#!" class="collection-item black-text">Make Up Wedding<span class="new badge custom-pink1 white-text" data-badge-caption="">Rp. 200000</span></a>
+				<a href="#!" class="collection-item black-text">Fermak Muka<span class="new badge custom-pink1 white-text" data-badge-caption="">Rp. 200000</span></a>
+				<a href="#!" class="collection-item black-text">Teman malam<span class="new badge custom-pink1 white-text" data-badge-caption="">Rp. 200000</span></a>
+				<a href="#!" class="collection-item black-text">Teman siang<span class="new badge custom-pink1 white-text" data-badge-caption="">Rp. 200000</span></a>
 			</div>
 		</div>
 
 		{{-- SECTION RIGHT --}}
 		<div class="col s12 m7 l8" style="">
+
 			<div class="card-panel" style="height: auto;">
 				<h1>Portfolio</h1>
-				<div class="row">
-				<?php for($i=0;$i<10;$i++){ ?>
-					<div class="col s2">
-						<!-- Modal Trigger -->
-						<a class="modal-trigger waves-effect waves-light" href="#modal<?php echo $i;?>">
-							<img style="width: 100px;" src="{{ asset('image/profile wall.jpg') }}">
-						</a>
-						<p style="margin-top: 0px; margin-bottom: 20px;">This is Photo Description</p>
-
-						<!-- Modal Structure -->
-						<div id="modal<?php echo $i;?>" class="modal modal-fixed-footer">
-							<div class="modal-content center">
-								<img style="margin: auto; width: 90%; height: auto;" src="{{ asset('image/profile wall.jpg') }}">
-							</div>
-							<div class="modal-footer">
-								<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Dislike</a>
-								<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Like</a>
-							</div>
-						</div>
+				<div class="carousel carousel-slider center" data-indicators="true">
+					<div class="carousel-fixed-item center">
+						<a class="btn waves-effect custom-pink1 white-text darken-text-2">Book</a>
 					</div>
-					<script type="text/javascript">
-						$(document).ready(function(){
-							$('.modal').modal();
-						});
-					</script>
-				<?php } ?>
+					<div class="carousel-item red white-text" href="#one!">
+						<h2>First Panel</h2>
+						<p class="white-text">This is your first panel</p>
+					</div>
+					<div class="carousel-item amber white-text" href="#two!">
+						<h2>Second Panel</h2>
+						<p class="white-text">This is your second panel</p>
+					</div>
+					<div class="carousel-item green white-text" href="#three!">
+						<h2>Third Panel</h2>
+						<p class="white-text">This is your third panel</p>
+					</div>
+					<div class="carousel-item blue white-text" href="#four!">
+						<h2>Fourth Panel</h2>
+						<p class="white-text">This is your fourth panel</p>
+					</div>
 				</div>
+				<script>
+					$('.carousel.carousel-slider').carousel({full_width: true});
+				</script>
 			</div>
 		</div>
 	</div>
