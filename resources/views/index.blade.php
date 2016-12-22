@@ -82,11 +82,31 @@
         </div>
         <hr> 
         <form class="contact-us left-align">
-          <input type="text" id="subject" placeholder="Name">
-          <input type="text" id="subject" placeholder="Email">
-          <input type="text" id="subject" placeholder="Subject">
-          <textarea id="textarea1" class="materialize-textarea" placeholder="Message"></textarea>
-          <input class="right btn" type="submit" value="Send">
+          <div class="row">
+            <div class="col s12 input-field ">
+              <input type="text" id="name" class="validate">
+              <label for="name">Name</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col s12 input-field ">
+              <input type="email" id="email" class="validate">
+              <label for="email">Email</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col s12 input-field ">
+              <input type="text" id="subject" class="validate">
+              <label for="subject">Subject</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col s12 input-field">
+              <textarea id="message" class="materialize-textarea"></textarea>
+              <label for="message">Message</label>
+              <input class="right btn custom-pink1" type="submit" value="Send">
+            </div>
+          </div>
         </form>  
       </div>
     </div>
