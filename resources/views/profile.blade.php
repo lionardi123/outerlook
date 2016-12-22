@@ -49,12 +49,12 @@
 					<img class="activator" src="{{ asset('image/profiledefault.jpeg') }}">
 				</div>
 				<div class="card-content">
-					<span class="card-title activator grey-text text-darken-4">Vembru<i class="material-icons right">more_vert</i></span>
+					<span class="card-title activator grey-text text-darken-4">Kecoa<i class="material-icons right">more_vert</i></span>
 				</div>
 				<div class="card-reveal">
 					<span class="card-title grey-text text-darken-4">About me<i class="material-icons right">close</i></span>
 					<p>
-						Vembry is vembru D:
+						Kecoa terbang D:
 					</p><br>
 					<span class="card-title grey-text text-darken-4">Contact Me</span>
 					<p>
