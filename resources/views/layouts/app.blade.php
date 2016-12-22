@@ -22,10 +22,10 @@
     <script src="{{{ asset('/js/materialize.min.js') }}}"></script>
     <script src="{{{ asset('/js/init.js') }}}"></script>
     <!-- Modal Structure -->
-    <div id="modal1" class="modal peach">
+    <div id="modal1" class="modal">
         <form action="#" method="POST">
             <div class="modal-content">
-                <h3 class="center">Sign In</h3>
+                <h3 class="center">Sign In<span class="dot">.</span></h3>
                 <div class="row">
                     <div class="col s12">
                         <input type="text" id="email" placeholder="Email">               
@@ -33,7 +33,7 @@
                     </div>
                 </div>
             </div>
-            <div class="modal-footer peach">
+            <div class="modal-footer">
                 <button type="submit" class="modal-action modal-close waves-effect waves-green btn-flat">Sign In</button>
             </div>
         </form>

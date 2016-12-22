@@ -11,13 +11,14 @@
 |
 */
 
-Route::get('/', function () {
-    return view('/index');
-});
-Route::get('/makeupclass', function(){
-	return view('/makeupClassc');
-});
+Route::get('/', 'PagesController@index');
 
-Route::get('profile', function(){
-    return view('/profile');
-});
+Route::get('/makeupclass', 'PagesController@categories');
+
+Route::get('/profile', 'PagesController@cart');
+
+Route::get('/article','PagesController@article');
+
+Route::get('/profile','PagesController@profile');
+
+Route::get('/register','PagesController@register');
