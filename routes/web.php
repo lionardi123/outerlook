@@ -17,3 +17,7 @@ Route::get('/', function () {
 Route::get('/makeupclass', function(){
 	return view('/makeupClassc');
 });
+
+Route::get('profile', function(){
+    return view('/profile');
+});
