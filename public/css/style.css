@@ -257,3 +257,15 @@ hr{
   font-family: 'Satisfy', cursive;
   font-weight: normal;
 }
+
+.categories-container{
+  min-height: 800px;
+}
+
+.side-bar{
+  position: fixed;
+  top:300px;
+  left: 0;
+  height:400px;
+  color:blue;
+}

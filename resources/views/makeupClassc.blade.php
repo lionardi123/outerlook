@@ -9,12 +9,13 @@
     </div>
     <div class="parallax"><img src="{{{asset('image/category-header1.jpg')}}}" alt="Unsplashed background img 1"></div>
   </div>
-  <div class="container categories-container peach">
-  	<div class="row">
-  		<div class="col s3">
-  		asdsa
-  		</div>
-  		<div class="col s9">
+  <div class="categories-container peach">
+  	<div class="side-bar white">
+	asdas
+  	</div>
+  	<div class="row categories-cards">
+  		<div class="col s3 offset-s3">
+  		asdas
   		</div>
   	</div>
   </div>
