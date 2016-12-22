@@ -39,25 +39,23 @@
         </form>
     </div>
     <nav role="navigation" class="transparent">
-        <div class="nav-wrapper">
-            <div class="background">
+        <div class="nav-wrapper custom-pink1">
+            {{-- <div class="background">
                 <img src="{{{asset('/image/OUTERLOOK-1.jpg')}}}">
-            </div>
+            </div> --}}
             <div class="container">
                 <ul class="left hide-on-med-and-down">
-                    <li><a href="#">Home</a>
+                    <li>
+                        <a class="custom-pink-text" href="#">Home</a>
                     </li>
-                    <li><a href="#">Categories</a>
-                    </li>
-                    <li><a href="#">Book Online</a>
-                    </li>
-                    <li><a href="#">Terms and Conditions</a>
+                    <li>
+                        <a class="custom-pink-text" href="#">Book Online</a>
                     </li>
                 </ul>
                 <ul class="right hide-on-med-and-down">
-                    <li><a href="#modal1">Sign In</a>
+                    <li><a class="custom-pink-text" href="#modal1">Sign In</a>
                     </li>
-                    <li><a href="#modal1">Register</a>
+                    <li><a class="custom-pink-text" href="#modal1">Register</a>
                     </li>
                 </ul>
 

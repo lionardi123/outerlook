@@ -28,7 +28,8 @@
 	}
 </style>
 <div class="container">
-	<div class="row asd center" style="padding-left: 11.250px; border-right-width: 11.250px;">
+	{{-- SECTION TOP --}}
+	<div class="row asd center" style="padding-left: 11.250px; padding-right: 11.250px; border-right-width: 11.250px;">
 		<div class="card small">
 			<div class="card-image waves-effect waves-block waves-light custom-card">
 				<img class="activator" src="{{ asset('image/profile wall.jpg') }}">
@@ -73,7 +74,7 @@
 		</div>
 
 		{{-- SECTION RIGHT --}}
-		<div class="col s12 m7 l8" style="padding-right: 0px;">
+		<div class="col s12 m7 l8" style="">
 			<div class="card-panel" style="height: auto;">
 				<h1>Portfolio</h1>
 				<div class="row">
