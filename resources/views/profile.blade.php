@@ -1,3 +1,7 @@
+@section('title')
+<title>Profile</title>
+@endsection
+
 @extends('layouts.app')
 
 @section('content')
@@ -18,6 +22,9 @@
 	}
 	p{
 		line-height: 1rem;
+	}
+	.card .card-content .card-title {
+		line-height: 2rem;
 	}
 </style>
 <div class="container">
@@ -42,20 +49,26 @@
 				</div>
 				<div class="card-content">
 					<span class="card-title activator grey-text text-darken-4">Vembru<i class="material-icons right">more_vert</i></span>
-					<p><a href="#">facebook</a></p>
+					<p>
+						<a class="custom-pink light black-text btn" href="#">Book</a>
+					</p>
 				</div>
 				<div class="card-reveal">
 					<span class="card-title grey-text text-darken-4">About me<i class="material-icons right">close</i></span>
 					<p>
 						Vembry is vembru D:
+					</p><br>
+					<span class="card-title grey-text text-darken-4">Contact Me</span>
+					<p>
+						asdasdasas
 					</p>
 				</div>
 			</div>
 			<div class="collection">
-				<a href="#!" class="collection-item">Make Up Wedding<span class="new badge" data-badge-caption="">Rp. 200000</span></a>
-				<a href="#!" class="collection-item">Fermak Muka<span class="new badge" data-badge-caption="">Rp. 200000</span></a>
-				<a href="#!" class="collection-item">Teman malam<span class="new badge" data-badge-caption="">Rp. 200000</span></a>
-				<a href="#!" class="collection-item">Teman siang<span class="new badge" data-badge-caption="">Rp. 200000</span></a>
+				<a href="#!" class="collection-item black-text">Make Up Wedding<span class="new badge custom-pink black-text" data-badge-caption="">Rp. 200000</span></a>
+				<a href="#!" class="collection-item black-text">Fermak Muka<span class="new badge custom-pink black-text" data-badge-caption="">Rp. 200000</span></a>
+				<a href="#!" class="collection-item black-text">Teman malam<span class="new badge custom-pink black-text" data-badge-caption="">Rp. 200000</span></a>
+				<a href="#!" class="collection-item black-text">Teman siang<span class="new badge custom-pink black-text" data-badge-caption="">Rp. 200000</span></a>
 			</div>
 		</div>
 
