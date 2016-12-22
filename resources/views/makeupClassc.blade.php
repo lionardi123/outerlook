@@ -20,8 +20,15 @@
               <img class="max-size" src="{{{asset('/image/makeup-class1.jpg')}}}">
             </div>
             <div class="card-content">
-              <div class="card-profile">
+              <div class="card-profile left">
                 <img class="responsive-img" src="{{{asset('/image/round-profile1.png')}}}">
+              </div>
+               <div class="card-profile-text left">
+                  <span class="profile-name">Clara</span></br>
+                  <span class="location">Jakarta Selatan</span></br>
+                  <div class="rating">
+                    <span>&starf;</span><span>&starf;</span><span>&starf;</span><span>&starf;</span><span>&starf;</span>
+                  </div>
               </div>
             </div>
           </div>
@@ -32,8 +39,15 @@
               <img class="max-size" src="{{{asset('/image/makeup-class2.jpg')}}}">
             </div>
             <div class="card-content">
-              <div class="card-profile">
+              <div class="card-profile left">
                 <img class="responsive-img" src="{{{asset('/image/round-profile1.png')}}}">
+              </div>
+              <div class="card-profile-text left">
+                  <span class="profile-name">Clara</span></br>
+                  <span class="location">Jakarta Selatan</span></br>
+                  <div class="rating">
+                    <span>&starf;</span><span>&starf;</span><span>&starf;</span><span>&starf;</span><span>&starf;</span>
+                  </div>
               </div>
             </div>
           </div>
@@ -44,8 +58,15 @@
               <img class="max-size" src ="{{{asset('/image/makeup-class3.jpg')}}}">
             </div>
             <div class="card-content">
-              <div class="card-profile">
+              <div class="card-profile left">
                 <img class="responsive-img" src="{{{asset('/image/round-profile1.png')}}}">
+              </div>
+               <div class="card-profile-text left">
+                  <span class="profile-name">Clara</span></br>
+                  <span class="location">Jakarta Selatan</span></br>
+                  <div class="rating">
+                    <span>&starf;</span><span>&starf;</span><span>&starf;</span><span>&starf;</span><span>&starf;</span>
+                  </div>
               </div>
             </div>
           </div>

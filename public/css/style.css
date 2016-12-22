@@ -289,6 +289,28 @@ hr{
   border-radius: 0 0 2px 2px;
 }
 
+.card-profile-text{
+  padding: 2px 0px 0px 15px;
+}
+
+.profile-name{
+  font-size: 1.4rem;
+}
+
+.location{
+  color:#9fa8a3;
+  font-size: 0.9rem;
+}
+
 .max-size{
   height: 400px;
+}
+
+.rating > span {
+  display: inline-block;
+  position: relative;
+  width: 1em;
+  font-size: 1.5rem;
+  color:gold;
+  content: "\2605";
 }
