@@ -27,14 +27,20 @@
             <div class="modal-content">
                 <h3 class="center">Sign In<span class="dot">.</span></h3>
                 <div class="row">
-                    <div class="col s12">
-                        <input type="text" id="email" placeholder="Email">               
-                        <input type="text" id="password" placeholder="Password">
+                    <div class="input-field col s12">
+                        <input type="text" id="email">  
+                        <label for="email">Email</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">             
+                        <input type="password" id="password">
+                        <label for="password">Password</label>
                     </div>
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="submit" class="modal-action modal-close waves-effect waves-green btn-flat">Sign In</button>
+                <button type="submit" class="btn custom-pink1 modal-action modal-close">Sign In</button>
             </div>
         </form>
     </div>

@@ -104,7 +104,7 @@
             <div class="col s12 input-field">
               <textarea id="message" class="materialize-textarea"></textarea>
               <label for="message">Message</label>
-              <input class="right btn custom-pink1" type="submit" value="Send">
+              <button class="right btn custom-pink1" type="submit">Send</button>
             </div>
           </div>
         </form>  

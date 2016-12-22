@@ -1,15 +1,21 @@
 @extends('layouts.app')
 
 @section('content')
-	<div class="container white padding-20 add-margin-50">
+	<div class="container white padding-20 add-margin-5">
+		<div class="row">
+			<div class="col s12">
+				<h4>Marlena&#8217;s 3 P&#8217;s to Getting Started as a Makeup Artist</h4>
+				<span id="posted-by">Posted by <span class="peach-text">Admin</span> on 12:15AM 12/23/2016</span>
+				<div class="divider"></div>
+			</div>
+		</div>
 		<div class="row">
 			<div class="col s12">
 				<img class="responsive-img" src="{{{asset('/image/article-content1.jpg')}}}">
 			</div>
 		</div>
 		<div class="row">
-			<div class="col s12">
-		<h3>Marlena&#8217;s 3 P&#8217;s to Getting Started as a Makeup Artist</h3>
+			<div class="col s12">	
 		<h5>Practice</h5>
 		<ul>
 		<li>This is your most important preparation as makeup artistry is a skill to be improved on.  Going to school will not bring you a better job- your skills and determination will.</li>
