@@ -29,4 +29,8 @@ class PagesController extends Controller
     public function register(){
     	return view('register');
     }
+
+    public function book($user_id){
+        return view('book',['user_id' => $user_id]);
+    }
 }

@@ -21,4 +21,6 @@ Route::get('/article','PagesController@article');
 
 Route::get('/profile','PagesController@profile');
 
+Route::get('/book/{user_id}','PagesController@book');
+
 Route::get('/register','PagesController@register');
