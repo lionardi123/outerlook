@@ -25,3 +25,6 @@ Route::get('/register1','PagesController@register');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+Route::get('/book/{user_id}','PagesController@book');
+
+Route::get('/register','PagesController@register');

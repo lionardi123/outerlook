@@ -13,69 +13,63 @@
   	<div class="categories-cards">
     <?php 
       for ($x = 0; $x <= 3; $x++) { ?>
-      <div class="row">
+         <div class="row">
         <div class="col s12 m3 l3 offset-m3 offset-l3">
-          <a href="{{url('/profile')}}">
-            <div class="card small-card">
-              <div class="card-image">
-                <img class="max-size" src="{{{asset('/image/makeup-class1.jpg')}}}">
+          <div class="card small-card">
+            <div class="card-image">
+              <img class="max-size" src="{{{asset('/image/makeup-class1.jpg')}}}">
+            </div>
+            <div class="card-content">
+              <div class="card-profile left">
+                <img class="responsive-img" src="{{{asset('/image/round-profile1.png')}}}">
               </div>
-              <div class="card-content">
-                <div class="card-profile left">
-                  <img class="responsive-img" src="{{{asset('/image/round-profile1.png')}}}">
-                </div>
-                 <div class="card-profile-text left">
-                    <span class="profile-name">Clara</span></br>
-                    <span class="location">Jakarta Selatan</span></br>
-                    <div class="rating">
-                      <span>&starf;</span><span>&starf;</span><span>&starf;</span><span>&starf;</span><span>&starf;</span>
-                    </div>
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="col s12 m3 l3">
-          <a href="{{url('/profile')}}">
-            <div class="card small-card">
-              <div class="card-image">
-                <img class="max-size" src="{{{asset('/image/makeup-class2.jpg')}}}">
-              </div>
-              <div class="card-content">
-                <div class="card-profile left">
-                  <img class="responsive-img" src="{{{asset('/image/round-profile1.png')}}}">
-                </div>
-                <div class="card-profile-text left">
-                    <span class="profile-name">Clara</span></br>
-                    <span class="location">Jakarta Selatan</span></br>
-                    <div class="rating">
-                      <span>&starf;</span><span>&starf;</span><span>&starf;</span><span>&starf;</span><span>&starf;</span>
-                    </div>
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="col s12 m3 l3">
-          <a href="{{url('/profile')}}">
-            <div class="card small-card">
-              <div class="card-image max-size">
-                <img class="max-size" src ="{{{asset('/image/makeup-class3.jpg')}}}">
-              </div>
-              <div class="card-content">
-                <div class="card-profile left">
-                  <img class="responsive-img" src="{{{asset('/image/round-profile1.png')}}}">
-                </div>
-                 <div class="card-profile-text left">
-                    <span class="profile-name">Clara</span></br>
-                    <span class="location">Jakarta Selatan</span></br>
-                    <div class="rating">
-                      <span>&starf;</span><span>&starf;</span><span>&starf;</span><span>&starf;</span><span>&starf;</span>
-                    </div>
-                </div>
+               <div class="card-profile-text left">
+                  <span class="profile-name">Clara</span></br>
+                  <span class="location">Jakarta Selatan</span></br>
+                  <div class="rating">
+                    <span>&starf;</span><span>&starf;</span><span>&starf;</span><span>&starf;</span><span>&starf;</span>
+                  </div>
               </div>
             </div>
-            </a>
+          </div>
+        </div>
+        <div class="col s12 m3 l3">
+          <div class="card small-card">
+            <div class="card-image">
+              <img class="max-size" src="{{{asset('/image/makeup-class2.jpg')}}}">
+            </div>
+            <div class="card-content">
+              <div class="card-profile left">
+                <img class="responsive-img" src="{{{asset('/image/round-profile1.png')}}}">
+              </div>
+              <div class="card-profile-text left">
+                  <span class="profile-name">Clara</span></br>
+                  <span class="location">Jakarta Selatan</span></br>
+                  <div class="rating">
+                    <span>&starf;</span><span>&starf;</span><span>&starf;</span><span>&starf;</span><span>&starf;</span>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m3 l3">
+          <div class="card small-card">
+            <div class="card-image max-size">
+              <img class="max-size" src ="{{{asset('/image/makeup-class3.jpg')}}}">
+            </div>
+            <div class="card-content">
+              <div class="card-profile left">
+                <img class="responsive-img" src="{{{asset('/image/round-profile1.png')}}}">
+              </div>
+               <div class="card-profile-text left">
+                  <span class="profile-name">Clara</span></br>
+                  <span class="location">Jakarta Selatan</span></br>
+                  <div class="rating">
+                    <span>&starf;</span><span>&starf;</span><span>&starf;</span><span>&starf;</span><span>&starf;</span>
+                  </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
