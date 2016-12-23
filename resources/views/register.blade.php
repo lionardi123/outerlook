@@ -59,7 +59,7 @@
 			<div class="row">
 				<div class="input-field col s12">
 					<textarea id="message" class="materialize-textarea"></textarea>
-          			<label for="message">Message</label>
+          			<label for="message">Address</label>
 				</div>
 			</div>
 			<div class="row">

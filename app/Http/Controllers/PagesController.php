@@ -11,6 +11,8 @@ class PagesController extends Controller
     }
 
     public function categories(){
+
+    	
     	return view('makeupClassc');
     }
 

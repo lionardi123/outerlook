@@ -8,7 +8,7 @@
         <img style="height:300px;" class="responsive-img" src="{{{asset('/image/OUTERLOOK-10.jpg')}}}">
       </div>
     </div>
-    <form>
+    <form action="{{url('/makeupclass')}}">
       <div class="row">
         <div class="input-field col s12 m5 l5 offset-m1 offset-l1">
           <select>
