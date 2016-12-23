@@ -21,4 +21,7 @@ Route::get('/article','PagesController@article');
 
 Route::get('/profile','PagesController@profile');
 
-Route::get('/register','PagesController@register');
+Route::get('/register1','PagesController@register');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');

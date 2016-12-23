@@ -2,16 +2,17 @@
 
 @section('content')
 	<div class="container white padding-20 add-margin-50">
-		<form>
+		<form action="{{url('/register')}}" method="POST">
+		 {{ csrf_field() }}
 			<div class="row">
 				<div class="input-field col s12">
-					 <input id="email" type="email" class="validate">
+					 <input id="email" type="email" class="validate" name="email" value="{{old('email')}}">
           			 <label for="email">Email</label>
 				</div>
 			</div>
 			<div class="row">
 				<div class="input-field col s12 m6 l6">
-					<input id="password" type="password" class="validate">
+					<input id="password" type="password" class="validate" name="password" value="{{old('password')}}">
           			<label for="password">Password</label>
 				</div>
 				<div class="input-field col s12 m6 l6">
@@ -21,24 +22,24 @@
 			</div>
 			<div class="row">
 				<div class="input-field col s12 m6 l6">
-					<input id="firstname" type="text" class="validate">
+					<input id="firstname" type="text" class="validate" name="firstname" value="{{old('firstname')}}">
           			<label for="firstname">First Name</label>
 				</div>
 				<div class="input-field col s12 m6 l6">
-					<input id="lastname" type="text" class="validate">
+					<input id="lastname" type="text" class="validate" name="lastname" value="{{old('lastname')}}">
           			<label for="lastname">Last Name</label>
 				</div>
 			</div>
 			<div class="row">
 				<div class="input-field col s12 m6 l6">
-					<input id="dateofbirth" type="date" class="datepicker">
+					<input id="dateofbirth" type="date" class="datepicker" name="dateofbirth" value="{{old('dateofbirth')}}">
 					<label for="dateofbirth">Date of Birth</label>
 				</div>
 				<div class="input-field col s12 m6 l6">
 					<label>Gender</label></br>
-					<input name="group1" type="radio" id="male"/>
+					<input name="group1" type="radio" id="male" value="male"/>
       				<label for="male">Male</label>
-      				<input name="group1" type="radio" id="female" />
+      				<input name="group1" type="radio" id="female" value="female"/>
       				<label for="female">Female</label>
 				</div>
 			</div>
@@ -58,8 +59,8 @@
 			</div>
 			<div class="row">
 				<div class="input-field col s12">
-					<textarea id="message" class="materialize-textarea"></textarea>
-          			<label for="message">Address</label>
+					<textarea id="address" class="materialize-textarea" name="address" value="{{old('address')}}"></textarea>
+          			<label for="address">Address</label>
 				</div>
 			</div>
 			<div class="row">
