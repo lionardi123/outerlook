@@ -25,6 +25,7 @@ class usercontroller extends Controller
     	$city = Request::input('city');
     	$zip  = Request::input('zip');
     	$address = Request::input('address');
+    	$typename = Request::input('typename');
 
     	$valid = Validator::make(Request::all(),[
     		'email' => 'required',
@@ -61,6 +62,12 @@ class usercontroller extends Controller
     		$newuser->user_city = $city;
     		$newuser->user_zip = $zip;
     		$newuser->user_address = $address;
+    		if($typename=="normal"){
+    			$newuser->user_usertypeid = 1;
+    		}
+    		else if($typename=="makeupartist"){
+    			$newuser->user_usertypeid = 2;
+    		}
     		$newuser->save();
     		return redirect('/signup')->with('message','Sign up success!');
     	}

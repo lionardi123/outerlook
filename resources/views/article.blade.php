@@ -6,7 +6,7 @@
 			<div class="col s12">
 				<h4>Marlena&#8217;s 3 P&#8217;s to Getting Started as a Makeup Artist</h4>
 				<span id="posted-by">Posted by <span class="peach-text">Admin</span> on 12:15AM 12/23/2016</span>
-				<div class="divider"></div>
+				<hr>
 			</div>
 		</div>
 		<div class="row">

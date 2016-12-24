@@ -72,6 +72,16 @@
 				</div>
 			</div>
 			<div class="row">
+				<div class="input-field col s12 m4 l4">
+					<select name="typename">
+				    	<option value="" disabled selected>Choose your option</option>
+				    	<option value="normal">Normal</option>
+				    	<option value="makeupartist">Makeup Artist</option>
+				    </select>
+				    <label >Sign up as : </label>
+				</div>
+			</div>
+			<div class="row">
 				<div class="col s12 m2 l2 offset-m10 offset-l10">
 					<button class="btn custom-pink1" type="submit">Submit</button>
 				</div>
@@ -84,5 +94,10 @@
 			selectMonths: true, // Creates a dropdown to control month
 			selectYears: 200, // Creates a dropdown of 15 years to control year
 		});
+
+		$(document).ready(function() {
+    		$('select').material_select();
+  		});
+          
 	</script>
 @endsection
