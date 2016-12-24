@@ -64,7 +64,7 @@
 			</div>
 			<div class="collection">
 				<a href="#!" class="collection-item black-text">Make Up Wedding<span class="new badge custom-pink1 white-text" data-badge-caption="">Rp. 200000</span></a>
-				<a href="#!" class="collection-item black-text">Fermak Muka<span class="new badge custom-pink1 white-text" data-badge-caption="">Rp. 200000</span></a>
+				<a href="#!" class="collection-item black-text">Vermak Muka<span class="new badge custom-pink1 white-text" data-badge-caption="">Rp. 200000</span></a>
 				<a href="#!" class="collection-item black-text">Teman malam<span class="new badge custom-pink1 white-text" data-badge-caption="">Rp. 200000</span></a>
 				<a href="#!" class="collection-item black-text">Teman siang<span class="new badge custom-pink1 white-text" data-badge-caption="">Rp. 200000</span></a>
 			</div>
@@ -74,7 +74,7 @@
 		<div class="col s12 m7 l8" style="">
 
 			<div class="card-panel" style="height: auto;">
-				<h1>Portfolio</h1>
+				<h1 class="custom-pink1-text">Portfolio</h1>
 				<div class="carousel carousel-slider center" data-indicators="true">
 					<div class="carousel-fixed-item center">
 						<a class="btn waves-effect custom-pink1 white-text darken-text-2">Book</a>

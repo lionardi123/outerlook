@@ -25,6 +25,8 @@ class CreateMsusersTable extends Migration
             $table->string('user_city');
             $table->string('user_zip');
             $table->string('user_address');
+            $table->string('user_about');
+            $table->string('user_phone');
             // $table->timestamps();
             $table->timestamp('created_at')->useCurrent();
             $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'));     
