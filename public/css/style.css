@@ -319,3 +319,19 @@ input[type=text]:focus {
 .img-col{
   height: 400px;
 }
+
+#img-profile{
+  position: relative;
+  left:50px;
+  top:120px;
+  max-height: 150px;
+  width: auto;
+}
+#profile-description{
+  position: relative;
+  left:300px;
+  background-color: white !important;
+}
+.a{
+  background-color: blue;
+}
