@@ -10,7 +10,6 @@
 	color: #fde6d8 !important;
 }
 
-<<<<<<< HEAD
 .black-text{
 	color:black;
 }
@@ -21,16 +20,17 @@ a .black-text:hover{
 
 .dropdown-content li {
 	clear:none!important;
-	
+}	
+
 .custom-pink1-text{
 	color: #AE6873 !important;
 
 }
-
+/* //ini yg bikin jadi putih backgorund
 select{
 	background-color: white !important;
 }
-
+*/
 body{
 	background-color: #fde6d8 !important;
 }
