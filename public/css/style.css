@@ -335,3 +335,7 @@ input[type=text]:focus {
 .a{
   background-color: blue;
 }
+
+.error-msg{
+  color: red;
+}

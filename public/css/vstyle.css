@@ -10,6 +10,18 @@
 	color: #fde6d8 !important;
 }
 
+.black-text{
+	color:black;
+}
+
+a .black-text:hover{
+	opacity: 0.5px;
+}
+
+.dropdown-content li {
+	clear:none!important;
+}
+
 select{
 	background-color: white !important;
 }

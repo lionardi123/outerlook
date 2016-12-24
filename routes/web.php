@@ -21,10 +21,20 @@ Route::get('/article','PagesController@article');
 
 Route::get('/profile','PagesController@profile');
 
-Route::get('/register1','PagesController@register');
-Auth::routes();
+Route::get('/signup','PagesController@signup');
 
 Route::get('/home', 'HomeController@index');
+
 Route::get('/book/{user_id}','PagesController@book');
 
-Route::get('/register','PagesController@register');
+Route::group(['middleware' =>'guest'],function(){
+	Route::post('/signup/doregister','usercontroller@insert');
+});
+
+//Route POST
+Route::group(['middleware' =>'auth'],function(){
+	Route::get('/logout','logincontroller@dologout');
+});
+
+Route::post('/dologin','logincontroller@dologin');
+

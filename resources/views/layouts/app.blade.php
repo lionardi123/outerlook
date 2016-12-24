@@ -24,28 +24,41 @@
     <script src="{{{ asset('/js/materialize.min.js') }}}"></script>
     <script src="{{{ asset('/js/init.js') }}}"></script>
     <!-- Modal Structure -->
+    @if(Auth::guest())
     <div id="modal1" class="modal">
-        <form>
+        <form role="form" action="{{url('/dologin')}}" method="POST">
             <div class="modal-content">
-                <h3 class="center">Sign In<span class="dot">.</span></h3>
+                <h3 class="center bold">Sign In<span class="dot">.</span></h3>
+                <hr>
+                @if(!empty($errors->first()))
+                <div class="center error-msg">{{$errors->first()}}</div>
+                @endif
                 <div class="row">
                     <div class="input-field col s12">
-                        <input type="text" id="email">  
+                        <input type="text" id="email" name="email">
                         <label for="email">Email</label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s12">             
-                        <input type="password" id="password">
+                        <input type="password" id="password" name="password">
                         <label for="password">Password</label>
                     </div>
                 </div>
+                <div class="row">
+                    <div class="col s12">
+                        <button type="submit" class="center btn custom-pink1 modal-action modal-close">Sign In</button>
+                    </div>
+                </div>
+                <hr>
+                <div class="content-footer">
+                    <a class="bold right black-text" href="{{url('/signup')}}">Sign Up</a>
+                </div>
             </div>
-            <div class="modal-footer">
-                <button type="submit" class="btn custom-pink1 modal-action modal-close">Sign In</button>
-            </div>
+           {!! csrf_field() !!}
         </form>
     </div>
+    @endif
     <nav role="navigation" class="transparent">
         <div class="nav-wrapper custom-pink1">
             {{-- <div class="background">
@@ -61,26 +74,37 @@
                     </li>
                 </ul>
                 <ul class="right hide-on-med-and-down">
-                    <li>
-                        <a href="#"></a>
-                    </li>
+                    @if(Auth::guest())
                     <li>
                         <a class="white-text" href="#modal1">Sign In</a>
                     </li>
                     <li>
-                        <a class="white-text" href="{{url('/register')}}">Register</a>
+                        <a class="white-text" href="{{url('/signup')}}">Sign Up</a>
                     </li>
+                    @else
+                    <ul id="dropdown2" class="dropdown-content custom-pink1">
+                        <li><a class="white-text" href="{{url('/logout')}}">Sign Out</a></li>
+                    </ul>
+                    <a class="white-text left dropdown-button" href="#!" data-activates="dropdown2">{{Auth::user()->user_fullname}}<i class="right"></i></a>
+                    <li>
+                        
+                    </li>
+                    @endif
                 </ul>
-
                 <ul id="nav-mobile" class="side-nav peach">
                     <li><a href="{{url('/')}}">Home</a>
                     </li>
                     <li><a href="#">Book Online</a>
                     </li>
+                    @if(Auth::guest())
                     <li><a href="#">Sign In</a>
                     </li>
                     <li><a href="{{url('/register')}}">Register</a>
                     </li>
+                    @else
+                    <li><a href="#">Sign Out</a>
+                    </li>
+                    @endif
                 </ul>
                 <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
             </div>
@@ -88,19 +112,29 @@
     </nav>
     @yield('content')
     <script>
-        $('.modal').modal({
-                  dismissible: true, // Modal can be dismissed by clicking outside of the modal
-                  opacity: .5, // Opacity of modal background
-                  in_duration: 300, // Transition in duration
-                  out_duration: 200, // Transition out duration
-                  starting_top: '4%', // Starting top style attribute
-                  ending_top: '10%', // Ending top style attribute
-                  ready: function(modal, trigger) { // Callback for Modal open. Modal and trigger parameters available.
-                    console.log(modal, trigger);
-                },
+          $('.dropdown-button').dropdown({
+              inDuration: 300,
+              outDuration: 225,
+              constrain_width: false, // Does not change width of dropdown to that of the activator
+              hover: true, // Activate on hover
+              gutter: 0, // Spacing from edge
+              belowOrigin: true, // Displays dropdown below the button
+              alignment: 'left' // Displays dropdown with edge aligned to the left of button
             }
-        );
-      
+          );
+        
+     
+        $('#modal1').modal({
+            dismissible: true, // Modal can be dismissed by clicking outside of the modal
+            opacity: .5, // Opacity of modal background
+            in_duration: 300, // Transition in duration
+            out_duration: 200, // Transition out duration
+            starting_top: '4%', // Starting top style attribute
+            ending_top: '10%', // Ending top style attribute
+            ready: function(modal, trigger) { // Callback for Modal open. Modal and trigger parameters available.
+            console.log(modal, trigger);
+            },
+        });
     </script>
 </body>
 

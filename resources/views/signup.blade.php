@@ -2,7 +2,15 @@
 
 @section('content')
 	<div class="container white padding-20 add-margin-50">
-		<form action="{{url('/register')}}" method="POST">
+		@if(Session::has('message'))
+		<div class="center"><span>{{Session::get('message')}}</span></div>
+		@else
+		<h1 class="center bold">Sign Up<span class="dot">.</span></h1>
+		<hr>
+		@if(!empty($errors->first()))
+			<div class="center error-msg">{{$errors->first()}}</div>
+		@endif
+		<form action="{{url('/signup/doregister')}}" method="POST">
 		 {{ csrf_field() }}
 			<div class="row">
 				<div class="input-field col s12">
@@ -16,7 +24,7 @@
           			<label for="password">Password</label>
 				</div>
 				<div class="input-field col s12 m6 l6">
-					<input id="confpassword" type="password" class="validate">
+					<input id="confpassword" type="password" class="validate" name="confPassword">
           			<label for="confpassword">Confirm Password</label>
 				</div>
 			</div>
@@ -37,23 +45,23 @@
 				</div>
 				<div class="input-field col s12 m6 l6">
 					<label>Gender</label></br>
-					<input name="group1" type="radio" id="male" value="male"/>
+					<input name="gender" type="radio" id="male" value="male"/>
       				<label for="male">Male</label>
-      				<input name="group1" type="radio" id="female" value="female"/>
+      				<input name="gender" type="radio" id="female" value="female"/>
       				<label for="female">Female</label>
 				</div>
 			</div>
 			<div class="row">
 				<div class="input-field col s12 m4 l4">
-					<input id="state" type="text" class="validate">
+					<input id="state" type="text" class="validate" name="state">
           			<label for="state">State</label>
 				</div>
 				<div class="input-field col s12 m4 l4">
-					<input id="state" type="text" class="validate">
+					<input id="state" type="text" class="validate" name="city">
           			<label for="city">City</label>
 				</div>
 				<div class="input-field col s12 m4 l4">
-					<input id="zip" type="text" class="validate">
+					<input id="zip" type="text" class="validate" name="zip">
           			<label for="zip">ZIP</label>
 				</div>
 			</div>
@@ -69,11 +77,12 @@
 				</div>
 			</div>
 		</form>
+		@endif
 	</div>
 	<script>
 		$('.datepicker').pickadate({
 			selectMonths: true, // Creates a dropdown to control month
-			selectYears: 15 // Creates a dropdown of 15 years to control year
+			selectYears: 200, // Creates a dropdown of 15 years to control year
 		});
 	</script>
 @endsection

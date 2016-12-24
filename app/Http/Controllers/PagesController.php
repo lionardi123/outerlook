@@ -26,8 +26,8 @@ class PagesController extends Controller
     	return view('article');
     }
 
-    public function register(){
-    	return view('register');
+    public function signup(){
+    	return view('signup');
     }
 
     public function book($user_id){
