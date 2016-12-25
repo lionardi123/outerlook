@@ -14,12 +14,18 @@ class CreateArticlesTable extends Migration
     public function up()
     {
         Schema::create('msarticles', function (Blueprint $table) {
-            $table->increments('article_id');
+            $table->increments('id');
             $table->string('article_title');
             $table->longtext('article_body');
-            $table->integer('admin_id');
+            $table->integer('admin_id')->unsigned();
             $table->timestamps();
+            $table->foreign('admin_id')->references('id')->on('msusers');
+            
         });
+
+        /*Schema::table('msarticles',function(Blueprint $table){
+
+        });*/
     }
 
     /**

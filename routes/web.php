@@ -33,6 +33,7 @@ Route::group(['middleware' =>'guest'],function(){
 
 //Route POST
 Route::group(['middleware' =>'auth'],function(){
+	Route::post('/article/{article}/edit','ArticleController@edit');
 	Route::get('/logout','logincontroller@dologout');
 });
 

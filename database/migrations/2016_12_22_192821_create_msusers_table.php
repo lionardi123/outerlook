@@ -14,23 +14,31 @@ class CreateMsusersTable extends Migration
     public function up()
     {
         Schema::create('msusers', function (Blueprint $table) {
-            $table->increments('user_id');
+            $table->increments('id');
             $table->string('user_email');
             $table->string('user_password');
             $table->string('user_fullname');
-            $table->integer('user_usertypeid')->;
+            $table->integer('user_usertypeid')->unsigned();
             $table->string('user_gender');
             $table->date('user_DOB');
             $table->string('user_state');
             $table->string('user_city');
             $table->string('user_zip');
             $table->string('user_address');
-            $table->string('user_about');
-            $table->string('user_phone');
-            // $table->timestamps();
+            $table->string('user_about')->default('abc');
+            $table->string('user_phone')->default('081298810551');
+            //$table->timestamps();
+
+            $table->foreign('user_usertypeid')->references('id')->on('ltusertype');  
             $table->timestamp('created_at')->useCurrent();
-            $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'));     
+            $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'));  
+           
         });
+
+       // Schema::table('msusers',function($table){
+            
+
+       // });
     }
 
     /**

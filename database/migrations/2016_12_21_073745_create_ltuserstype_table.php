@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateLtservicestypeTable extends Migration
+class CreateLtuserstypeTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class CreateLtservicestypeTable extends Migration
      */
     public function up()
     {
-        Schema::create('ltservicestype', function (Blueprint $table) {
+        Schema::create('ltusertype', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('servicetype_name');
-            $table->string('servicetype_description');
+            $table->string('usertype_name');
+            $table->string('usertype_description');
             //$table->timestamps();
             $table->timestamp('created_at')->useCurrent();
             $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP')); 
@@ -30,6 +30,6 @@ class CreateLtservicestypeTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('ltservicestype');
+        Schema::dropIfExists('ltusertype');
     }
 }

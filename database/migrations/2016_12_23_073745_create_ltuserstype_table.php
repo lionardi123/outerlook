@@ -14,10 +14,10 @@ class CreateLtuserstypeTable extends Migration
     public function up()
     {
         Schema::create('ltusertype', function (Blueprint $table) {
-            $table->increments('usertype_id');
+            $table->increments('id');
             $table->string('usertype_name');
             $table->string('usertype_description');
-            // $table->timestamps();
+            $table->timestamps();
             $table->timestamp('created_at')->useCurrent();
             $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP')); 
         });
