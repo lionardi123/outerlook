@@ -59,37 +59,25 @@
 	<div class="section">
 		<div id="articles">
 			<h1 class="center bold">Articles<span class="dot">.</span></h1>
+			<?php 
+			use App\Article;
+			$i = 1;
+			$article = Article::whereId($i)->first();
+			?>
 			<div class="row">
-				<div class="col s12 m4 l4">
-					<a href="{{url('/article')}}">
-						<div class="card">
-							<div class="card-image">
-								<img src="{{{asset('image/article3.jpg')}}}">
-								<div class="card-titles title-opacity"><span>HOW TO BE A MAKE UP ARTIST</span><span class="read-more">Read more>></span></div>
+			@for($i=1;$i<=3;$i++)
+			<div class="col s12 m4 l4">
+				<a href="{{url("/article/$i")}}">
+					<div class="card">
+						<div class="card-image">
+							<img src="{{{asset('image/article3.jpg')}}}">
+							<div class="card-titles title-opacity"><span>{{$article->article_title}}</span><span class="read-more">Read more>></span>
 							</div>
 						</div>
-					</a>
-				</div>
-				<div class="col s12 m4 l4">
-					<a href="{{url('/article')}}">
-						<div class="card">
-							<div class="card-image">
-								<img src="{{{asset('image/article2.jpg')}}}">
-								<div class="card-titles title-opacity"><span>ORI/FAKE M.A.C PALETTE</span><span class="read-more">Read more>></span></div>
-							</div>
-						</div>
-					</a>
-				</div>
-				<div class="col s12 m4 l4">
-					<a href="{{url('/article')}}">
-						<div class="card">
-							<div class="card-image">
-								<img src="{{{asset('image/article1.jpg')}}}">
-								<div class="card-titles title-opacity"><span>NARS ON SALE UP TO 35%!</span><span class="read-more">Read more>></span></div>
-							</div>
-						</div>
-					</a>
-				</div>
+					</div>
+				</a>
+			</div>	
+			@endfor
 			</div>
 		</div>
 	</div>
@@ -136,6 +124,7 @@
 		</div>
 	</div>
 </div>
+
 <script>
 	$(document).ready(function() {
 		$('select').material_select();

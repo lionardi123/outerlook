@@ -39,6 +39,7 @@ class usercontroller extends Controller
     		'city' => 'required',
     		'zip' => 'required',
     		'address'=> 'required',
+            'typename'=> 'required',
     	]);
 
     	if($valid->fails()){
@@ -55,7 +56,6 @@ class usercontroller extends Controller
     		$newuser->user_email = $email;
     		$newuser->user_password = bcrypt($password);
     		$newuser->user_fullname = $name;
-    		$newuser->user_usertypeid = 1;
     		$newuser->user_gender = $gender;
     		$newuser->user_DOB = $dateofbirth;
     		$newuser->user_state = $state;

@@ -17,7 +17,7 @@ Route::get('/makeupclass', 'PagesController@categories');
 
 Route::get('/profile', 'PagesController@cart');
 
-Route::get('/article','PagesController@article');
+Route::get('/article/{article}','ArticleController@show');
 
 Route::get('/profile','PagesController@profile');
 

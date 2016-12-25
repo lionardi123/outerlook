@@ -18,7 +18,7 @@ class CreateMsusersTable extends Migration
             $table->string('user_email');
             $table->string('user_password');
             $table->string('user_fullname');
-            $table->integer('user_usertypeid');
+            $table->integer('user_usertypeid')->;
             $table->string('user_gender');
             $table->date('user_DOB');
             $table->string('user_state');
