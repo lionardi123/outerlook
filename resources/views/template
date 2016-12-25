@@ -1,0 +1,11 @@
+@section('title')
+<title> 
+	//
+</title>
+@endsection
+
+@extends('layouts.app')
+
+@section('content')
+	
+@endsection
