@@ -62,15 +62,17 @@
 			<?php 
 			use App\Article;
 			$i = 1;
-			$article = Article::whereId($i)->first();
 			?>
 			<div class="row">
 			@for($i=1;$i<=3;$i++)
+			<?php
+			$article = Article::whereId($i)->first();
+			?>
 			<div class="col s12 m4 l4">
 				<a href="{{url("/article/$i")}}">
 					<div class="card">
-						<div class="card-image">
-							<img src="{{{asset('image/article3.jpg')}}}">
+						<div class="card-image index-card">
+							<img class="index-card" src="{{{asset("/image/$article->id/$article->article_imagecard")}}}">
 							<div class="card-titles title-opacity"><span>{{$article->article_title}}</span><span class="read-more">Read more>></span>
 							</div>
 						</div>

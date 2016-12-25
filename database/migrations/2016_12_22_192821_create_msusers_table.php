@@ -27,8 +27,8 @@ class CreateMsusersTable extends Migration
             $table->string('user_address');
             $table->string('user_about')->default('abc');
             $table->string('user_phone')->default('081298810551');
-            //$table->timestamps();
-
+            $table->string('user_avatar')->nullable();
+            
             $table->foreign('user_usertypeid')->references('id')->on('ltusertype');  
             $table->timestamp('created_at')->useCurrent();
             $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'));  
