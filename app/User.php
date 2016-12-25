@@ -27,6 +27,16 @@ class User extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'password', 'remember_token',
+        'user_password', 'remember_token',
     ];
+
+    public function getAuthPassword () {
+
+        return $this->user_password;
+    }
+
+    public function articles(){
+        return $this->hasMany('App\Article','admin_id','id');
+    }
+
 }

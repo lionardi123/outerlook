@@ -17,7 +17,7 @@ Route::get('/makeupclass', 'PagesController@categories');
 
 Route::get('/profile', 'PagesController@cart');
 
-Route::get('/article','PagesController@article');
+Route::get('/article/{article}','ArticleController@show');
 
 Route::get('/profile','PagesController@profile');
 
@@ -33,6 +33,7 @@ Route::group(['middleware' =>'guest'],function(){
 
 //Route POST
 Route::group(['middleware' =>'auth'],function(){
+	Route::post('/article/{article}/edit','ArticleController@edit');
 	Route::get('/logout','logincontroller@dologout');
 });
 

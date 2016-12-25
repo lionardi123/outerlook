@@ -14,11 +14,11 @@ class CreateMsservicesTable extends Migration
     public function up()
     {
         Schema::create('msservices', function (Blueprint $table) {
-            $table->increments('service_id');
+            $table->increments('id');
             $table->integer('user_id');
             $table->string('service_name');
             $table->string('service_servicetypeid');
-            // $table->timestamps();
+            //$table->timestamps();
             $table->timestamp('created_at')->useCurrent();
             $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP')); 
         });

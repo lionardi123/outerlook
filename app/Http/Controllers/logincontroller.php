@@ -25,10 +25,7 @@ class logincontroller extends Controller
     		return redirect('/')->withErrors('Email or Password cannot be empty');
     	}
     	else{
-    		$auth = Auth::attempt([
-    			'user_email' => $email,
-    			'user_password' => $password
-    		]);
+    		$auth = Auth::attempt(['user_email' => Request::input('email'), 'password' => Request::input('password')]);
 
     		if(!$auth){
     			return redirect('/')->withErrors('Email or/and Password is wrong');
