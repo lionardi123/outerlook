@@ -18,6 +18,8 @@ class CreateArticlesTable extends Migration
             $table->string('article_title');
             $table->longtext('article_body');
             $table->integer('admin_id')->unsigned();
+            $table->string('article_imagedetail');
+            $table->string('article_imagecard');
             $table->timestamps();
             $table->foreign('admin_id')->references('id')->on('msusers');
             

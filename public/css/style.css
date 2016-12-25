@@ -339,3 +339,7 @@ input[type=text]:focus {
 .error-msg{
   color: red;
 }
+
+.index-card{
+  height: 100%;
+}
