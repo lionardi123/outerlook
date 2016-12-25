@@ -72,7 +72,7 @@
 				<a href="{{url("/article/$i")}}">
 					<div class="card">
 						<div class="card-image index-card">
-							<img class="index-card" src="{{{asset("/image/$article->id/$article->article_imagedetail")}}}">
+							<img class="index-card" src="{{{asset("/image/$article->id/$article->article_imagecard")}}}">
 							<div class="card-titles title-opacity"><span>{{$article->article_title}}</span><span class="read-more">Read more>></span>
 							</div>
 						</div>
