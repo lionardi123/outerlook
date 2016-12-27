@@ -14,9 +14,10 @@ class CreateMsmakeupworkshopDetailTable extends Migration
     public function up()
     {
         Schema::create('msmakeupworkshop_detail', function (Blueprint $table) {
-            $table->integer('id');
+            $table->increments('id');
+            $table->integer('workshop_id');
             $table ->timestamps();
-            $table->foreign('workshop_ownerid')->references('id')->on('msmakeupworkshop');
+            $table->foreign('workshop_id')->references('id')->on('msmakeupworkshop');
         });
     }
 

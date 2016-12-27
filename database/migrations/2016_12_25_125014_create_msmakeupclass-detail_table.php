@@ -14,9 +14,10 @@ class CreateMsmakeupclassDetailTable extends Migration
     public function up()
     {
         Schema::create('msmakeupclass_detail', function (Blueprint $table) {
-            $table->integer('id');
+            $table->increments('id');
+            $table->integer('class_id');
             $table->timestamps();
-            $table->foreign('class_ownerid')->references('id')->on('msmakeupclass');
+            $table->foreign('class_id')->references('id')->on('msmakeupclass');
         });
     }
 
