@@ -62,12 +62,84 @@
 					</p>
 				</div>
 			</div>
+			{{-- COLLECTION JOB --}}
 			<div class="collection">
 				<a href="#!" class="collection-item black-text">Make Up Wedding<span class="new badge custom-pink1 white-text" data-badge-caption="">Rp. 200000</span></a>
 				<a href="#!" class="collection-item black-text">Vermak Muka<span class="new badge custom-pink1 white-text" data-badge-caption="">Rp. 200000</span></a>
 				<a href="#!" class="collection-item black-text">Teman malam<span class="new badge custom-pink1 white-text" data-badge-caption="">Rp. 200000</span></a>
 				<a href="#!" class="collection-item black-text">Teman siang<span class="new badge custom-pink1 white-text" data-badge-caption="">Rp. 200000</span></a>
 			</div>
+			{{-- COLLECTION MAKEUP-CLASS --}}
+			<ul class="collection">
+				<li class="collection-item avatar">
+					<i class="material-icons circle green">insert_chart</i>
+					<span class="title"><i>MakeUp Class Name</i></span>
+					<p><b>Class Date</b><br>
+						Class Price
+					</p>
+					<a href="#!" class="secondary-content"><i class="material-icons custom-pink1-text">delete</i></a>
+				</li>
+				<li class="collection-item avatar">
+					<i class="material-icons circle">folder</i>
+					<span class="title">MakeUp Class Name</span>
+					<p><b>Class Date</b><br>
+						Class Price
+					</p>
+					<a href="#!" class="secondary-content"><i class="material-icons custom-pink1-text">delete</i></a>
+				</li>
+				<li class="collection-item avatar">
+					<i class="material-icons circle green">insert_chart</i>
+					<span class="title"><i>MakeUp Class Name</i></span>
+					<p><b>Class Date</b><br>
+						Class Price
+					</p>
+					<a href="#!" class="secondary-content"><i class="material-icons custom-pink1-text">delete</i></a>
+				</li>
+				<li class="collection-item avatar">
+					<i class="material-icons circle red">play_arrow</i>
+					<span class="title"><i>MakeUp Class Name</i></span>
+					<p><b>Class Date</b><br>
+						Class Price
+					</p>
+					<a href="#!" class="secondary-content"><i class="material-icons custom-pink1-text">delete</i></a>
+				</li>
+			</ul>
+
+			{{-- COLLECTION MAKEUP-WORKSHOP --}}
+			<ul class="collection">
+				<li class="collection-item avatar">
+					<i class="material-icons circle green">insert_chart</i>
+					<span class="title"><i>MakeUp Workshop Name</i></span>
+					<p><b>Workshop Date</b><br>
+						Workshop Price
+					</p>
+					<a href="#!" class="secondary-content"><i class="material-icons custom-pink1-text">delete</i></a>
+				</li>
+				<li class="collection-item avatar">
+					<i class="material-icons circle">folder</i>
+					<span class="title"><i>MakeUp Workshop Name</i></span>
+					<p><b>Workshop Date</b><br>
+						Workshop Price
+					</p>
+					<a href="#!" class="secondary-content"><i class="material-icons custom-pink1-text">delete</i></a>
+				</li>
+				<li class="collection-item avatar">
+					<i class="material-icons circle green">insert_chart</i>
+					<span class="title"><i>MakeUp Workshop Name</i></span>
+					<p><b>Workshop Date</b><br>
+						Workshop Price
+					</p>
+					<a href="#!" class="secondary-content"><i class="material-icons custom-pink1-text">delete</i></a>
+				</li>
+				<li class="collection-item avatar">
+					<i class="material-icons circle red">play_arrow</i>
+					<span class="title"><i>MakeUp Workshop Name</i></span>
+					<p><b>Workshop Date</b><br>
+						Workshop Price
+					</p>
+					<a href="#!" class="secondary-content"><i class="material-icons custom-pink1-text">delete</i></a>
+				</li>
+			</ul>
 		</div>
 
 		{{-- SECTION RIGHT --}}
