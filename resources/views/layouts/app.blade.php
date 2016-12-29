@@ -14,6 +14,7 @@
     <link href="{{{ asset('/css/materialize.min.css') }}}" type="text/css" rel="stylesheet" media="screen,projection" />
     <link href="{{{ asset('/css/vstyle.css') }}}" type="text/css" rel="stylesheet" media="screen,projection" />
     <link href="{{{ asset('/css/style.css') }}}" type="text/css" rel="stylesheet" media="screen,projection" /> 
+    <link href="{{{ asset('/css/nouislider.css') }}}" type="text/css" rel="stylesheet" media="screen,projection" /> 
 
 </head>
 
@@ -23,6 +24,7 @@
     <script src="{{{ asset('/js/angular.min.js') }}}"></script>
     <script src="{{{ asset('/js/materialize.min.js') }}}"></script>
     <script src="{{{ asset('/js/init.js') }}}"></script>
+    <script src="{{{ asset('/js/nouislider.js') }}}"></script>
     <!-- Modal Structure -->
     @if(Auth::guest())
     <div id="modal1" class="modal">

@@ -6,6 +6,22 @@
  * Made By MaterializeCSS.com
  */
 
+ input::-webkit-input-placeholder {
+color: #9fa8a3 !important;
+}
+ 
+input:-moz-placeholder { /* Firefox 18- */
+color: #9fa8a3 !important;  
+}
+ 
+input::-moz-placeholder {  /* Firefox 19+ */
+color: #9fa8a3 !important;  
+}
+ 
+input:-ms-input-placeholder {  
+color: #9fa8a3 !important;  
+}
+
 nav ul a,
 nav .brand-logo {
   color: #444;
@@ -275,8 +291,11 @@ hr{
   font-size: 1.4rem;
 }
 
+.gray{
+  color:#9fa8a3 !important;
+}
+
 .location{
-  color:#9fa8a3;
   font-size: 0.9rem;
 }
 
@@ -342,4 +361,39 @@ input[type=text]:focus {
 
 .index-card{
   height: 100%;
+}
+
+.sidebar{
+  display:block; 
+  position:absolute; 
+  margin-top:8px;
+  left: 20px;
+  width: 20%;
+}
+.padding-top-sidebar{
+  padding: 20px 10px 0px 10px;
+}
+
+.search-box{
+  padding: 2px 0px 2px 20px !important;
+  height: 30px !important;
+  font-size: 1rem !important;
+  width: 90% !important;
+}
+
+.grey{
+  background-color: #e3e3e3 !important;
+}
+
+.search-section-header{
+  padding-left:30px;
+  font-size: 1.2rem;
+}
+.search-section{
+  padding-left:28px !important;
+  margin-top: -10px;
+}
+
+.search-section-select{
+  
 }
