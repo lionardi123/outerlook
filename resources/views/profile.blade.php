@@ -63,16 +63,18 @@
 				</div>
 			</div>
 			{{-- COLLECTION JOB --}}
-			<div class="collection">
-				<a href="#!" class="collection-item black-text">Make Up Wedding<span class="new badge custom-pink1 white-text" data-badge-caption="">Rp. 200000</span></a>
-				<a href="#!" class="collection-item black-text">Vermak Muka<span class="new badge custom-pink1 white-text" data-badge-caption="">Rp. 200000</span></a>
-				<a href="#!" class="collection-item black-text">Teman malam<span class="new badge custom-pink1 white-text" data-badge-caption="">Rp. 200000</span></a>
-				<a href="#!" class="collection-item black-text">Teman siang<span class="new badge custom-pink1 white-text" data-badge-caption="">Rp. 200000</span></a>
-			</div>
+			<ul class="collection with-header">
+				<li class="collection-header custom-pink1-text"><h4>Bookings</h4></li>
+				<li class="collection-item">Make Up Wedding<span class="new badge custom-pink1 white-text" data-badge-caption="">Rp. 200000</span</li>
+				<li class="collection-item">Vermak Muka<span class="new badge custom-pink1 white-text" data-badge-caption="">Rp. 200000</span></li>
+				<li class="collection-item">Teman malam<span class="new badge custom-pink1 white-text" data-badge-caption="">Rp. 200000</span></li>
+				<li class="collection-item">Teman siang<span class="new badge custom-pink1 white-text" data-badge-caption="">Rp. 200000</span></li>
+			</ul>
 			{{-- COLLECTION MAKEUP-CLASS --}}
-			<ul class="collection">
+			<ul class="collection with-header">
+				<li class="collection-header custom-pink1-text"><h5>Make Up Class</h5></li>
 				<li class="collection-item avatar">
-					<i class="material-icons circle green">insert_chart</i>
+					{{-- <i class="material-icons circle green">insert_chart</i> --}}
 					<span class="title"><i>MakeUp Class Name</i></span>
 					<p><b>Class Date</b><br>
 						Class Price
@@ -106,7 +108,8 @@
 			</ul>
 
 			{{-- COLLECTION MAKEUP-WORKSHOP --}}
-			<ul class="collection">
+				<ul class="collection with-header">
+					<li class="collection-header custom-pink1-text"><h5>Make Up Workshop</h5></li>
 				<li class="collection-item avatar">
 					<i class="material-icons circle green">insert_chart</i>
 					<span class="title"><i>MakeUp Workshop Name</i></span>

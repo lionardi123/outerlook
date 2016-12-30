@@ -15,9 +15,11 @@ class CreateMsmakeupclassDetailTable extends Migration
     {
         Schema::create('msmakeupclass_detail', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('class_id');
+            $table->integer('class_id')->unsigned();
+            $table->integer('class_participantid')->unsigned();
             $table->timestamps();
             $table->foreign('class_id')->references('id')->on('msmakeupclass');
+            $table->foreign('class_participantid')->references('id')->on('msusers');
         });
     }
 
