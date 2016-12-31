@@ -27,6 +27,7 @@
 		line-height: 2rem;
 	}
 </style>
+{{$owned}} 	
 <div class="container">
 	{{-- SECTION TOP --}}
 	<div class="row asd center" style="padding-left: 11.250px; padding-right: 11.250px; border-right-width: 11.250px;">
@@ -49,26 +50,23 @@
 					<img class="activator" src="{{ asset('image/profiledefault.jpeg') }}">
 				</div>
 				<div class="card-content">
-					<span class="card-title activator grey-text text-darken-4">Kecoa<i class="material-icons right">more_vert</i></span>
+					<span class="card-title activator grey-text text-darken-4">{{ $profile->user_fullname }}<i class="material-icons right">more_vert</i></span>
 				</div>
 				<div class="card-reveal">
 					<span class="card-title grey-text text-darken-4">About me<i class="material-icons right">close</i></span>
 					<p>
-						Kecoa terbang D:
+						{{$profile->user_about}}
 					</p><br>
 					<span class="card-title grey-text text-darken-4">Contact Me</span>
 					<p>
-						asdasdasas
+						{{$profile->user_phone}}
 					</p>
 				</div>
 			</div>
 			{{-- COLLECTION JOB --}}
 			<ul class="collection with-header">
 				<li class="collection-header custom-pink1-text"><h4>Bookings</h4></li>
-				<li class="collection-item">Make Up Wedding<span class="new badge custom-pink1 white-text" data-badge-caption="">Rp. 200000</span</li>
-				<li class="collection-item">Vermak Muka<span class="new badge custom-pink1 white-text" data-badge-caption="">Rp. 200000</span></li>
-				<li class="collection-item">Teman malam<span class="new badge custom-pink1 white-text" data-badge-caption="">Rp. 200000</span></li>
-				<li class="collection-item">Teman siang<span class="new badge custom-pink1 white-text" data-badge-caption="">Rp. 200000</span></li>
+				<li class="collection-item">Service Example<span class="new badge custom-pink1 white-text" data-badge-caption="">Rp. Price</span></li>
 			</ul>
 			{{-- COLLECTION MAKEUP-CLASS --}}
 			<ul class="collection with-header">
@@ -79,31 +77,13 @@
 					<p><b>Class Date</b><br>
 						Class Price
 					</p>
-					<a href="#!" class="secondary-content"><i class="material-icons custom-pink1-text">delete</i></a>
-				</li>
-				<li class="collection-item avatar">
-					<i class="material-icons circle">folder</i>
-					<span class="title">MakeUp Class Name</span>
-					<p><b>Class Date</b><br>
-						Class Price
-					</p>
-					<a href="#!" class="secondary-content"><i class="material-icons custom-pink1-text">delete</i></a>
-				</li>
-				<li class="collection-item avatar">
-					<i class="material-icons circle green">insert_chart</i>
-					<span class="title"><i>MakeUp Class Name</i></span>
-					<p><b>Class Date</b><br>
-						Class Price
-					</p>
-					<a href="#!" class="secondary-content"><i class="material-icons custom-pink1-text">delete</i></a>
-				</li>
-				<li class="collection-item avatar">
-					<i class="material-icons circle red">play_arrow</i>
-					<span class="title"><i>MakeUp Class Name</i></span>
-					<p><b>Class Date</b><br>
-						Class Price
-					</p>
-					<a href="#!" class="secondary-content"><i class="material-icons custom-pink1-text">delete</i></a>
+					<a href="#!" class="secondary-content">
+						@if($owned==0)
+						<i class="material-icons custom-pink1-text">delete</i>
+						@else
+						<i class="material-icons custom-pink1-text">input</i>
+						@endif
+					</a>
 				</li>
 			</ul>
 
@@ -116,31 +96,13 @@
 					<p><b>Workshop Date</b><br>
 						Workshop Price
 					</p>
-					<a href="#!" class="secondary-content"><i class="material-icons custom-pink1-text">delete</i></a>
-				</li>
-				<li class="collection-item avatar">
-					<i class="material-icons circle">folder</i>
-					<span class="title"><i>MakeUp Workshop Name</i></span>
-					<p><b>Workshop Date</b><br>
-						Workshop Price
-					</p>
-					<a href="#!" class="secondary-content"><i class="material-icons custom-pink1-text">delete</i></a>
-				</li>
-				<li class="collection-item avatar">
-					<i class="material-icons circle green">insert_chart</i>
-					<span class="title"><i>MakeUp Workshop Name</i></span>
-					<p><b>Workshop Date</b><br>
-						Workshop Price
-					</p>
-					<a href="#!" class="secondary-content"><i class="material-icons custom-pink1-text">delete</i></a>
-				</li>
-				<li class="collection-item avatar">
-					<i class="material-icons circle red">play_arrow</i>
-					<span class="title"><i>MakeUp Workshop Name</i></span>
-					<p><b>Workshop Date</b><br>
-						Workshop Price
-					</p>
-					<a href="#!" class="secondary-content"><i class="material-icons custom-pink1-text">delete</i></a>
+					<a href="#!" class="secondary-content">
+						@if($owned==0)
+						<i class="material-icons custom-pink1-text">delete</i>
+						@else
+						<i class="material-icons custom-pink1-text">input</i>
+						@endif
+					</a>
 				</li>
 			</ul>
 		</div>

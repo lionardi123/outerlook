@@ -25,6 +25,8 @@ Route::get('/signup','PagesController@signup');
 
 Route::get('/home', 'HomeController@index');
 
+Route::get('/profile/{profile_id}', 'ProfileController@profile');
+
 Route::get('/book/{user_id}','PagesController@book');
 
 Route::group(['middleware' =>'guest'],function(){

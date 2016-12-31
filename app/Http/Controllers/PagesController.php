@@ -18,10 +18,6 @@ class PagesController extends Controller
     	return view('cart');
     }
 
-    public function profile(){
-    	return view('profile');
-    }
-
     public function article(){
     	return view('article');
     }
