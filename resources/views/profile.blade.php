@@ -26,8 +26,29 @@
 	.card .card-content .card-title {
 		line-height: 2rem;
 	}
+	.dropdown-content li > a, .dropdown-content li > span {
+    	color: #AE6873 !important;
+	}
+	.dropdown-content{
+		max-height:200px !important;
+	}
 </style>
-{{$owned}} 	
+<script>
+	$(document).ready(function(){
+		$('.modal').modal();
+	});
+
+	$('.datepicker').pickadate({
+		selectMonths: true,
+		selectYears: 15
+	});
+
+	$(document).ready(function() {
+		$('select').material_select();
+	});
+</script>
+
+{{$owned}}	
 <div class="container">
 	{{-- SECTION TOP --}}
 	<div class="row asd center" style="padding-left: 11.250px; padding-right: 11.250px; border-right-width: 11.250px;">
@@ -63,51 +84,130 @@
 					</p>
 				</div>
 			</div>
-			{{-- COLLECTION JOB --}}
+
+			{{-- COLLECTION JOB START--}}
 			<ul class="collection with-header">
-				<li class="collection-header custom-pink1-text"><h4>Bookings</h4></li>
+				<li class="collection-header custom-pink1-text"><h5>Bookings</h5></li>
 				<li class="collection-item">Service Example<span class="new badge custom-pink1 white-text" data-badge-caption="">Rp. Price</span></li>
 			</ul>
-			{{-- COLLECTION MAKEUP-CLASS --}}
-			<ul class="collection with-header">
-				<li class="collection-header custom-pink1-text"><h5>Make Up Class</h5></li>
-				<li class="collection-item avatar">
-					{{-- <i class="material-icons circle green">insert_chart</i> --}}
-					<span class="title"><i>MakeUp Class Name</i></span>
-					<p><b>Class Date</b><br>
-						Class Price
-					</p>
-					<a href="#!" class="secondary-content">
-						@if($owned==0)
-						<i class="material-icons custom-pink1-text">delete</i>
-						@else
-						<i class="material-icons custom-pink1-text">input</i>
-						@endif
-					</a>
-				</li>
-			</ul>
+			{{-- COLLECTION JOB END--}}
 
-			{{-- COLLECTION MAKEUP-WORKSHOP --}}
-				<ul class="collection with-header">
-					<li class="collection-header custom-pink1-text"><h5>Make Up Workshop</h5></li>
-				<li class="collection-item avatar">
-					<i class="material-icons circle green">insert_chart</i>
-					<span class="title"><i>MakeUp Workshop Name</i></span>
-					<p><b>Workshop Date</b><br>
-						Workshop Price
-					</p>
-					<a href="#!" class="secondary-content">
-						@if($owned==0)
-						<i class="material-icons custom-pink1-text">delete</i>
-						@else
-						<i class="material-icons custom-pink1-text">input</i>
-						@endif
-					</a>
+			{{-- COLLECTION MAKEUP-CLASS START --}}
+			<ul class="collapsible collection with-header">
+				<li class="collection-header custom-pink1-text"><h5>Make-upClass</h5></li>
+				<li>
+					<div class="collapsible-header">Make-Up Class Name</div>
+					<div class="collapsible-body grey lighten-4">
+						<p>
+							@if($owned==0)
+							<a class="secondary-content custom-pink1-text"><i class="material-icons">delete</i></a>
+							<a class="secondary-content custom-pink1-text" href="#class1"><i class="material-icons">edit</i></a>
+							@else
+							<a class="secondary-content custom-pink1-text"><i class="material-icons">input</i></a>
+							@endif
+							<b>Class Date</b><br>
+							Class Description
+						</p>
+					</div>
+					@if($owned==0)
+					<div id="class1" class="modal bottom-sheet">
+						<div class="modal-content">
+							{{-- MODAL CONTENT START --}}
+							<div class="row">
+								<form class="col s12">
+									<div class="row">
+										<div class="input-field col s12">
+											<input id="txtClassname" name="txtClassname" type="text" class="validate">
+											<label for="txtClassname">Class Name</label>
+										</div>
+										<div class="input-field col s12">
+											<input id="txtClassprice" name="txtClassprice" type="number" class="validate">
+											<label for="txtClassprice">Class Price</label>
+										</div>
+										<div class="input-field col s12">
+											<select multiple>
+												<option value="" disabled selected>Choose your option</option>
+												<option value="1">Monday</option>
+												<option value="2">Tuesday</option>
+												<option value="3">Wednesday</option>
+												<option value="4">Thursday</option>
+												<option value="5">Friday</option>
+												<option value="6">Saturday</option>
+												<option value="7">Sunday</option>
+											</select>
+											<label>Class Day(s)</label>
+										</div>
+										<div class="input-field col s12">
+											<textarea id="txtClassname" class="materialize-textarea"></textarea>
+											<label for="txtClassname">Class Description</label>
+										</div>
+									</div>
+									<div class="modal-footer custom-pink1-text">
+										<a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Submit</a>
+									</div>
+								</form>
+							</div>
+							{{-- MODAL CONTENT END --}}
+						</div>
+					</div>
+					@endif
 				</li>
 			</ul>
+			{{-- COLLECTION MAKEUP-CLASS END --}}
+			
+			{{-- COLLECTION MAKEUP-WORKSHOP START --}}
+			<ul class="collapsible collection with-header">
+				<li class="collection-header custom-pink1-text"><h5>Make-Up Workshop</h5></li>
+				<li>
+					<div class="collapsible-header">Make-Up Workshop Name</div>
+					<div class="collapsible-body grey lighten-4">
+						<p>
+							@if($owned==0)
+							<a class="secondary-content custom-pink1-text"><i class="material-icons">delete</i></a>
+							<a class="secondary-content custom-pink1-text" href="#workshop1"><i class="material-icons">edit</i></a>
+							
+							@else
+							<a class="secondary-content custom-pink1-text"><i class="material-icons">input</i></a>
+							@endif
+							<b>Workshop Date</b><br>
+							Workshop Description
+						</p>
+					</div>
+					@if($owned==0)
+					<div id="workshop1" class="modal bottom-sheet">
+						<div class="modal-content">
+							{{-- MODAL CONTENT START --}}
+							<div class="row">
+								<form class="col s12">
+									<div class="row">
+										<div class="input-field col s12">
+											<input id="txtWorkshopname" name="txtWorkshopname" type="text" class="validate">
+											<label for="txtWorkshopname">Workshop Name</label>
+										</div>
+										<div class="input-field col s12">
+											<input id="txtWorkshopdate" name="txtWorkshopdate" type="date" class="datepicker">
+										</div>
+										<div class="input-field col s12">
+											<textarea id="txtWorkshopDescription" class="materialize-textarea"></textarea>
+											<label for="txtWorkshopDescription">Workshop Description</label>
+										</div>
+									</div>
+									<div class="modal-footer custom-pink1-text">
+										<a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Submit</a>
+									</div>
+								</form>
+							</div>
+							{{-- MODAL CONTENT END --}}
+						</div>
+					</div>
+					@endif
+				</li>
+			</ul>
+			{{-- COLLECTION MAKEUP-WORKSHOP END --}}
 		</div>
+		{{-- SECTION LEFT END --}}
 
-		{{-- SECTION RIGHT --}}
+		{{-- SECTION RIGHT START--}}
 		<div class="col s12 m7 l8" style="">
 
 			<div class="card-panel" style="height: auto;">
@@ -138,6 +238,7 @@
 				</script>
 			</div>
 		</div>
+		{{-- SECTION RIGHT END--}}
 	</div>
 </div>
 </div>
