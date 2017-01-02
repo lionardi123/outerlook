@@ -16,6 +16,9 @@ class CreateMsmakeupworkshopTable extends Migration
         Schema::create('msmakeupworkshop', function (Blueprint $table) {
             $table->increments('id');
             $table->string('workshop_name');
+            $table->string('workshop_avatar');
+            $table->date('workshop_date');
+            $table->string('workshop_description');
             $table->integer('workshop_ownerid')->unsigned();
             $table->timestamps();
             $table->foreign('workshop_ownerid')->references('id')->on('msusers');

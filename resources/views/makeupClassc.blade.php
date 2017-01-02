@@ -144,36 +144,38 @@
        prefix:'Rp ',
      })
     });
-var startrange = document.getElementById('start-range');
+    var startrange = document.getElementById('start-range');
 
-slider.noUiSlider.on('update', function( values, handle ) {
-  startrange.innerHTML = values[0];
-});
+    slider.noUiSlider.on('update', function( values, handle ) {
+      startrange.innerHTML = values[0];
+    });
 
-var endrange = document.getElementById('end-range');
+    var endrange = document.getElementById('end-range');
 
-slider.noUiSlider.on('update', function( values, handle ) {
-  endrange.innerHTML = values[1];
-});
+    slider.noUiSlider.on('update', function( values, handle ) {
+      endrange.innerHTML = values[1];
+    });
 
-var start = document.getElementById('startinput');
+    var start = document.getElementById('startinput');
 
 
-slider.noUiSlider.on('update', function( values, handle ) {
-  start.value = values[0];
-});
+    slider.noUiSlider.on('update', function( values, handle ) {
+      start.value = values[0];
+    });
 
-start.addEventListener('change', function(){
-  slider.noUiSlider.set(this.value);
-});
+    start.addEventListener('change', function(){
+      slider.noUiSlider.set(this.value);
+    });
 
-var end = document.getElementById('endinput');
+    var end = document.getElementById('endinput');
 
-slider.noUiSlider.on('update', function( values, handle ) {
-  end.value = values[1];
-});
+    slider.noUiSlider.on('update', function( values, handle ) {
+      end.value = values[1];
+    });
+
+
 
    
-        
+      
   </script>
 @endsection

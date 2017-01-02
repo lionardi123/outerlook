@@ -21,11 +21,11 @@ class usercontroller extends Controller
     	$name = Request::input('firstname').Request::input('lastname');;
     	$dateofbirth = date("Y-m-d", strtotime(Request::input('dateofbirth')));
     	$gender = Request::input('gender');
-    	$state = Request::input('state');
     	$city = Request::input('city');
-    	$zip  = Request::input('zip');
+        $phone =Request::input('phone');
     	$address = Request::input('address');
     	$typename = Request::input('typename');
+        $avatar = Request::file('avatar');
 
     	$valid = Validator::make(Request::all(),[
     		'email' => 'required',
@@ -35,9 +35,8 @@ class usercontroller extends Controller
     		'lastname' => 'required',
     		'dateofbirth' => 'required',
     		'gender' => 'required',
-    		'state' => 'required',
+            'phone' => 'required|numeric',
     		'city' => 'required',
-    		'zip' => 'required',
     		'address'=> 'required',
             'typename'=> 'required',
     	]);
@@ -58,9 +57,8 @@ class usercontroller extends Controller
     		$newuser->user_fullname = $name;
     		$newuser->user_gender = $gender;
     		$newuser->user_DOB = $dateofbirth;
-    		$newuser->user_state = $state;
     		$newuser->user_city = $city;
-    		$newuser->user_zip = $zip;
+            $newuser->user_phone= $phone;
     		$newuser->user_address = $address;
     		if($typename=="normal"){
     			$newuser->user_usertypeid = 1;
@@ -69,6 +67,10 @@ class usercontroller extends Controller
     			$newuser->user_usertypeid = 2;
     		}
     		$newuser->save();
+            $avatarName = 'user_avatar'.$newuser->id.'.'.$avatar->getClientOriginalExtension();
+            $avatar->move(public_path("image/avatars/{$newuser->id}"), $avatarName);
+            $newuser->user_avatar =  $avatarName;
+            $newuser->save();
     		return redirect('/signup')->with('message','Sign up success!');
     	}
     }
