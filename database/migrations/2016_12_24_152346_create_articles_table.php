@@ -20,7 +20,8 @@ class CreateArticlesTable extends Migration
             $table->integer('admin_id')->unsigned();
             $table->string('article_imagedetail');
             $table->string('article_imagecard');
-            $table->timestamps();
+            $table->timestamp('created_at')->useCurrent();
+            $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP')); 
             $table->foreign('admin_id')->references('id')->on('msusers');
             
         });

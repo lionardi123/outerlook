@@ -10,7 +10,7 @@
 		@if(!empty($errors->first()))
 			<div class="center error-msg">{{$errors->first()}}</div>
 		@endif
-		<form action="{{url('/signup/doregister')}}" method="POST">
+		<form action="{{url('/signup/doregister')}}" method="POST" enctype="multipart/form-data">
 		 {{ csrf_field() }}
 			<div class="row">
 				<div class="input-field col s12">
@@ -52,17 +52,30 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="input-field col s12 m4 l4">
-					<input id="state" type="text" class="validate" name="state">
-          			<label for="state">State</label>
+				<div class="input-field col s12">
+					<input name="phone" type="text" id="phone" value="{{old('phone')}}"/>
+					<label for="phone">Phone Number</label>
 				</div>
-				<div class="input-field col s12 m4 l4">
-					<input id="state" type="text" class="validate" name="city">
-          			<label for="city">City</label>
+			</div>
+			<div class="row">
+				<div class="input-field col s12 m6 l6">
+					<select name="typename">
+				    	<option value="" disabled selected>Choose your option</option>
+				    	<option value="normal">Normal</option>
+				    	<option value="makeupartist">Makeup Artist</option>
+				    </select>
+				    <label >Sign up as : </label>
 				</div>
-				<div class="input-field col s12 m4 l4">
-					<input id="zip" type="text" class="validate" name="zip">
-          			<label for="zip">ZIP</label>
+				<div class="input-field col s12 m6 l6">
+					<select name="city">
+						<option value="" disabled selected>Choose your option</option>
+						<option value="Jakarta Utara">Jakarta Utara</option>
+						<option value="Jakarta Selatan">Jakarta Selatan</option>
+						<option value="Jakarta Barat">Jakarta Barat</option>
+						<option value="Jakarta Timur">Jakarta Timur</option>
+						<option value="Tangerang">Tangerang</option>
+          			</select>
+          			<label >City : </label>
 				</div>
 			</div>
 			<div class="row">
@@ -72,13 +85,14 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="input-field col s12 m4 l4">
-					<select name="typename">
-				    	<option value="" disabled selected>Choose your option</option>
-				    	<option value="normal">Normal</option>
-				    	<option value="makeupartist">Makeup Artist</option>
-				    </select>
-				    <label >Sign up as : </label>
+				<div class="file-field">
+					<div class="btn">
+						<span>Choose your avatar</span>
+						<input type="file" name="avatar"> 
+					</div>
+					<div class="file-path-wrapper">
+						<input class="file-path validate" type="text">
+					</div>
 				</div>
 			</div>
 			<div class="row">

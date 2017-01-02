@@ -4,7 +4,15 @@
   <div id="index-banner" class="parallax-container categories-header valign-wrapper">
     <div class="section no-pad-bot">
       <div class="container">
-        <h1 class="header center peach-text valign">Makeup Class</h1>
+        <h1 class="header center peach-text valign">
+        @if($category=='1')
+        Makeup Artists
+        @elseif($category=='2')
+        Makeup Class
+        @else
+        Workshop
+        @endif
+        </h1>
       </div>
     </div>
     <div class="parallax"><img src="{{{asset('image/category-header1.jpg')}}}" alt="Unsplashed background img 1"></div>
@@ -51,13 +59,15 @@
             </div>
           </form>
         </div>
-    <?php 
-      for ($x = 0; $x <= 3; $x++) { ?>
-      
+    @if($category=='1')
+    <?php
+    use App\Article;
+    ?>
+    @foreach($users as $user)     
         <div class="col s12 m3 l3 offset-l3 offset-m3">
           <div class="card small-card">
             <div class="card-image">
-              <img class="max-size" src="{{{asset('/image/makeup-class1.jpg')}}}">
+              <img class="max-size" src="{{{asset('/image/cards_profile/$user->id/user_card$i')}}}">
             </div>
             <div class="card-content">
               <div class="card-profile left">
@@ -111,11 +121,8 @@
             </div>
           </div>
         </div>
-     
-
-    <?php
-      } 
-    ?>
+    @endforeach
+    @endif
       </div>
   	</div>
   </div>
@@ -144,36 +151,38 @@
        prefix:'Rp ',
      })
     });
-var startrange = document.getElementById('start-range');
+    var startrange = document.getElementById('start-range');
 
-slider.noUiSlider.on('update', function( values, handle ) {
-  startrange.innerHTML = values[0];
-});
+    slider.noUiSlider.on('update', function( values, handle ) {
+      startrange.innerHTML = values[0];
+    });
 
-var endrange = document.getElementById('end-range');
+    var endrange = document.getElementById('end-range');
 
-slider.noUiSlider.on('update', function( values, handle ) {
-  endrange.innerHTML = values[1];
-});
+    slider.noUiSlider.on('update', function( values, handle ) {
+      endrange.innerHTML = values[1];
+    });
 
-var start = document.getElementById('startinput');
+    var start = document.getElementById('startinput');
 
 
-slider.noUiSlider.on('update', function( values, handle ) {
-  start.value = values[0];
-});
+    slider.noUiSlider.on('update', function( values, handle ) {
+      start.value = values[0];
+    });
 
-start.addEventListener('change', function(){
-  slider.noUiSlider.set(this.value);
-});
+    start.addEventListener('change', function(){
+      slider.noUiSlider.set(this.value);
+    });
 
-var end = document.getElementById('endinput');
+    var end = document.getElementById('endinput');
 
-slider.noUiSlider.on('update', function( values, handle ) {
-  end.value = values[1];
-});
+    slider.noUiSlider.on('update', function( values, handle ) {
+      end.value = values[1];
+    });
+
+
 
    
-        
+      
   </script>
 @endsection

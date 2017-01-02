@@ -27,6 +27,8 @@ Route::get('/profileworkshop/{profileworkshop_id}', 'ProfileController@profilewo
 
 Route::get('/book/{user_id}','PagesController@book');
 
+Route::post('/categories','Pagescontroller@search');
+
 Route::group(['middleware' =>'guest'],function(){
 	Route::post('/signup/doregister','usercontroller@insert');
 });

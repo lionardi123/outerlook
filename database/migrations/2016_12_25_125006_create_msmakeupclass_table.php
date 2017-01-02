@@ -16,6 +16,10 @@ class CreateMsmakeupclassTable extends Migration
         Schema::create('msmakeupclass', function (Blueprint $table) {
             $table->increments('id');
             $table->string('class_name');
+            $table->string('class_avatar');
+            $table->date('class_startdate');
+            $table->date('class_enddate');
+            $table->string('class_description');
             $table->integer('class_ownerid')->unsigned();
             $table->timestamps();
             $table->foreign('class_ownerid')->references('id')->on('msusers');
