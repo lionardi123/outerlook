@@ -91,7 +91,7 @@
 				<li class="collection-header custom-pink1-text"><h5>Make-upClass</h5></li>
 				<li>
 					<div class="collapsible-header">Make-Up Class Name</div>
-					<div class="collapsible-body grey lighten-4">
+					<div class="collapsible-body grey lighten-3">
 						<p>
 							@if($owned==0)
 							<a class="secondary-content custom-pink1-text"><i class="material-icons">delete</i></a>
@@ -154,7 +154,7 @@
 				<li class="collection-header custom-pink1-text"><h5>Make-Up Workshop</h5></li>
 				<li>
 					<div class="collapsible-header">Make-Up Workshop Name</div>
-					<div class="collapsible-body grey lighten-4">
+					<div class="collapsible-body grey lighten-3">
 						<p>
 							@if($owned==0)
 							<a class="secondary-content custom-pink1-text"><i class="material-icons">delete</i></a>
@@ -203,7 +203,6 @@
 
 		{{-- SECTION RIGHT START--}}
 		<div class="col s12 m7 l8" style="">
-
 			<div class="card-panel" style="height: auto;">
 				<h1 class="custom-pink1-text">Portfolio</h1>
 				<div class="carousel carousel-slider center" data-indicators="true">
