@@ -31,12 +31,15 @@ class User extends Authenticatable
     ];
 
     public function getAuthPassword () {
-
         return $this->user_password;
     }
 
     public function articles(){
         return $this->hasMany('App\Article','admin_id','id');
+    }
+
+    public function makeupclass(){
+        return $this->hasMany('App\Makeupclass','class_ownerid','id');
     }
 
 }

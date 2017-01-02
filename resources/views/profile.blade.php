@@ -1,5 +1,5 @@
 @section('title')
-<title>Profile</title>
+<title>{{ $profile->user_fullname }}</title>
 @endsection
 
 @extends('layouts.app')
@@ -25,12 +25,6 @@
 	}
 	.card .card-content .card-title {
 		line-height: 2rem;
-	}
-	.dropdown-content li > a, .dropdown-content li > span {
-    	color: #AE6873 !important;
-	}
-	.dropdown-content{
-		max-height:200px !important;
 	}
 </style>
 <script>
@@ -126,7 +120,7 @@
 										</div>
 										<div class="input-field col s12">
 											<select multiple>
-												<option value="" disabled selected>Choose your option</option>
+												<option value="" disabled selected>Choose day(s)</option>
 												<option value="1">Monday</option>
 												<option value="2">Tuesday</option>
 												<option value="3">Wednesday</option>
