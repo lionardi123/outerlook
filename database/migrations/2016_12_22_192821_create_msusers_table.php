@@ -26,6 +26,7 @@ class CreateMsusersTable extends Migration
             $table->string('user_about')->nullable();
             $table->string('user_phone');
             $table->string('user_avatar')->nullable();
+            $table->string('user_cardimage')->nullable();
             $table->rememberToken();
             $table->foreign('user_usertypeid')->references('id')->on('ltusertype');  
             $table->timestamp('created_at')->useCurrent();

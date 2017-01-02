@@ -61,10 +61,10 @@ class usercontroller extends Controller
             $newuser->user_phone= $phone;
     		$newuser->user_address = $address;
     		if($typename=="normal"){
-    			$newuser->user_usertypeid = 1;
+    			$newuser->user_usertypeid = 2;
     		}
     		else if($typename=="makeupartist"){
-    			$newuser->user_usertypeid = 2;
+    			$newuser->user_usertypeid = 3;
     		}
     		$newuser->save();
             $avatarName = 'user_avatar'.$newuser->id.'.'.$avatar->getClientOriginalExtension();

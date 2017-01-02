@@ -8,10 +8,11 @@
 			<img style="height:300px;" class="responsive-img" src="{{{asset('/image/OUTERLOOK-10.jpg')}}}">
 		</div>
 	</div>
-	<form>
+	<form action="/categories" method="POST">
+	{{csrf_field()}}
 		<div class="row">
 			<div class="input-field col s12 m5 l5 offset-m1 offset-l1">
-				<select>
+				<select name="category">
 					<option value="" disabled selected>Choose your option</option>
 					<option value="1">Makeup Artist</option>
 					<option value="2">Makeup Class</option>
@@ -20,7 +21,7 @@
 				<label>Categories</label>
 			</div>
 			<div class="input-field col s12 m5 l5">
-				<select>
+				<select name="city">
 					<option value="" disabled selected>Choose your option</option>
 					<option value="1">Jakarta</option>
 					<option value="2">Tangerang</option>
