@@ -27,11 +27,22 @@ a .black-text:hover{
 	clear:none!important;
 }	
 
-/* //ini yg bikin jadi putih backgorund
-select{
-	background-color: white !important;
-}
-*/
 body{
 	background-color: #fde6d8 !important;
+}
+
+/*FORCE CSS*/
+
+a .black-text:hover{
+	opacity: 0.5px;
+}
+
+.dropdown-content li {
+	clear:none!important;
+}
+dropdown-content li > a, .dropdown-content li > span {
+    color: #AE6873 !important;
+}
+.dropdown-content{
+	max-height:200px !important;
 }

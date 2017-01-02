@@ -15,17 +15,15 @@ Route::get('/', 'PagesController@index');
 
 Route::get('/makeupclass', 'PagesController@categories');
 
-Route::get('/profile', 'PagesController@cart');
-
 Route::get('/article/{article}','ArticleController@show');
-
-Route::get('/profile','PagesController@profile');
 
 Route::get('/signup','PagesController@signup');
 
 Route::get('/home', 'HomeController@index');
 
 Route::get('/profile/{profile_id}', 'ProfileController@profile');
+Route::get('/profileclass/{profileclass_id}', 'ProfileController@profileclass');
+Route::get('/profileworkshop/{profileworkshop_id}', 'ProfileController@profileworkshop');
 
 Route::get('/book/{user_id}','PagesController@book');
 
