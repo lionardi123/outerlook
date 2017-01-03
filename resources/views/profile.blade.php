@@ -104,7 +104,7 @@
 		{{-- SECTION RIGHT START--}}
 		<div class="col s12 m7 l8" style="">
 			<div class="card-panel" style="height: auto;">
-				<h1 class="custom-pink1-text">Portfolio</h1>
+				<h4 class="custom-pink1-text">Portfolio</h4>
 				<div class="carousel carousel-slider center" data-indicators="true">
 					<div class="carousel-fixed-item center">
 						<a class="btn waves-effect custom-pink1 white-text darken-text-2">Book</a>
@@ -131,14 +131,21 @@
 				</script>
 			</div>
 			{{-- COLLECTION JOB START--}}
-			<ul class="collection with-header">
+			<ul class="collapsible collection with-header" data-collapsible="expandable">
 				<li class="collection-header custom-pink1-text"><h5>Bookings</h5></li>
-				<li class="collection-item">Service Example<span class="new badge custom-pink1 white-text" data-badge-caption="">Rp. Price</span></li>
+				<li>
+					<div class="collapsible-header">Service Example<span class="new badge white-text" data-badge-caption="">Rp. Price</span></div>
+					<div class="collapsible-body grey lighten-3">
+						<p>
+							Service Example
+						</p>
+					</div>
+				</li>
 			</ul>
 			{{-- COLLECTION JOB END--}}
 
 			{{-- COLLECTION MAKEUP-CLASS START --}}
-			<ul class="collapsible collection with-header">
+			<ul class="collapsible collection with-header" data-collapsible="expandable">
 				<li class="collection-header custom-pink1-text"><h5>Make-upClass</h5></li>
 				@foreach($classowned as $class)
 				<li>
@@ -210,7 +217,7 @@
 			{{-- COLLECTION MAKEUP-CLASS END --}}
 			
 			{{-- COLLECTION MAKEUP-WORKSHOP START --}}
-			<ul class="collapsible collection with-header">
+			<ul class="collapsible collection with-header" data-collapsible="expandable">
 				<li class="collection-header custom-pink1-text"><h5>Make-Up Workshop</h5></li>
 				@foreach($workshopowned as $workshop)
 				<li>

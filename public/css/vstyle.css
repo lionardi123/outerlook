@@ -50,3 +50,6 @@ dropdown-content li > a, .dropdown-content li > span {
 	min-width:297.750px;
 	min-height:339px;
 }
+.side-nav span.badge.new::before, .collapsible span.badge.new::before {
+    background-color: #AE6873 !important;
+}
