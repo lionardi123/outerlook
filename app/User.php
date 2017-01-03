@@ -44,5 +44,8 @@ class User extends Authenticatable
     public function makeupworkshop(){
         return $this->hasMany('App\Makeupworkshop','workshop_ownerid','id');
     }
+    public function type(){
+        return $this->belongsTo('App\Usertype','user_usertypeid','id');
+    }
 
 }

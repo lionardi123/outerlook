@@ -48,21 +48,16 @@
 	<div class="row asd center" style="padding-left: 11.250px; padding-right: 11.250px; border-right-width: 11.250px;">
 		<div class="card small">
 			<div class="card-image waves-effect waves-block waves-light custom-card">
-				<img class="activator" src="{{ asset('image/profile wall.jpg') }}">
+				<img class="activator" style="margin-top: -50%;" src="{{ asset('image/cards_profile/'.$profile->id.'/'.$profile->user_cardimage.'') }}">
 			</div>
 		</div>
-		{{-- <img class="responsive-img" src="{{ asset('image/profile wall.jpg') }}">
-		<div class="caption left-align">
-			<h3>Left Aligned Caption</h3>
-			<h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-		</div> --}}
 	</div>
 	<div class="row">
 		{{-- SECTION LEFT --}}
 		<div class="col s12 m5 l4"> 
 			<div class="card">
 				<div class="card-image waves-effect waves-block waves-light">
-					<img class="activator" src="{{ asset('image/profiledefault.jpeg') }}">
+					<img class="activator" src="{{ asset('image/avatars/'.$profile->id.'/'.$profile->user_avatar.'') }}">
 				</div>
 				<div class="card-content">
 					<span class="card-title activator grey-text text-darken-4">{{ $profile->user_fullname }}<i class="material-icons right">more_vert</i></span>
@@ -78,7 +73,63 @@
 					</p>
 				</div>
 			</div>
+			<ul class="collapsible collection with-header" data-collapsible="expandable">
+				<li class="collection-header custom-pink1-text"><h5>{{ $profile->user_fullname }} Info</h5></li>
+				<li>
+					<div class="collapsible-header">Location</div>
+					<div class="collapsible-body grey lighten-3">
+						
+						<p>{{$profile->user_address}}, <b>{{$profile->user_city}}</b></p>
+					</div>
+				</li>
+				<li>
+					<div class="collapsible-header">User Type</div>
+					<div class="collapsible-body grey lighten-3">
+						
+						<p><b>{{$profile->type->usertype_name}}</b></p>
+					</div>
+				</li>
+				<li>
+					<div class="collapsible-header">Date of Birth</div>
+					<div class="collapsible-body grey lighten-3">
+						
+						<p><b>{{$profile->user_DOB}}</b></p>
+					</div>
+				</li>
+			</ul>
+			
+		</div>
+		{{-- SECTION LEFT END --}}
 
+		{{-- SECTION RIGHT START--}}
+		<div class="col s12 m7 l8" style="">
+			<div class="card-panel" style="height: auto;">
+				<h1 class="custom-pink1-text">Portfolio</h1>
+				<div class="carousel carousel-slider center" data-indicators="true">
+					<div class="carousel-fixed-item center">
+						<a class="btn waves-effect custom-pink1 white-text darken-text-2">Book</a>
+					</div>
+					<div class="carousel-item red white-text" href="#one!">
+						<h2>First Panel</h2>
+						<p class="white-text">This is your first panel</p>
+					</div>
+					<div class="carousel-item amber white-text" href="#two!">
+						<h2>Second Panel</h2>
+						<p class="white-text">This is your second panel</p>
+					</div>
+					<div class="carousel-item green white-text" href="#three!">
+						<h2>Third Panel</h2>
+						<p class="white-text">This is your third panel</p>
+					</div>
+					<div class="carousel-item blue white-text" href="#four!">
+						<h2>Fourth Panel</h2>
+						<p class="white-text">This is your fourth panel</p>
+					</div>
+				</div>
+				<script>
+					$('.carousel.carousel-slider').carousel({full_width: true});
+				</script>
+			</div>
 			{{-- COLLECTION JOB START--}}
 			<ul class="collection with-header">
 				<li class="collection-header custom-pink1-text"><h5>Bookings</h5></li>
@@ -214,38 +265,6 @@
 				@endforeach
 			</ul>
 			{{-- COLLECTION MAKEUP-WORKSHOP END --}}
-		</div>
-		{{-- SECTION LEFT END --}}
-
-		{{-- SECTION RIGHT START--}}
-		<div class="col s12 m7 l8" style="">
-			<div class="card-panel" style="height: auto;">
-				<h1 class="custom-pink1-text">Portfolio</h1>
-				<div class="carousel carousel-slider center" data-indicators="true">
-					<div class="carousel-fixed-item center">
-						<a class="btn waves-effect custom-pink1 white-text darken-text-2">Book</a>
-					</div>
-					<div class="carousel-item red white-text" href="#one!">
-						<h2>First Panel</h2>
-						<p class="white-text">This is your first panel</p>
-					</div>
-					<div class="carousel-item amber white-text" href="#two!">
-						<h2>Second Panel</h2>
-						<p class="white-text">This is your second panel</p>
-					</div>
-					<div class="carousel-item green white-text" href="#three!">
-						<h2>Third Panel</h2>
-						<p class="white-text">This is your third panel</p>
-					</div>
-					<div class="carousel-item blue white-text" href="#four!">
-						<h2>Fourth Panel</h2>
-						<p class="white-text">This is your fourth panel</p>
-					</div>
-				</div>
-				<script>
-					$('.carousel.carousel-slider').carousel({full_width: true});
-				</script>
-			</div>
 		</div>
 		{{-- SECTION RIGHT END--}}
 	</div>

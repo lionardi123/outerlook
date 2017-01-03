@@ -12,15 +12,15 @@ class ltusertypeTableSeeder extends Seeder
     public function run()
     {
         DB::table('ltusertype')->insert([
-        	'usertype_name' => 'admin'
+        	'usertype_name' => 'Administrator'
         	]);
 
         DB::table('ltusertype')->insert([
-        	'usertype_name' => 'normal'
+        	'usertype_name' => 'Member'
         	]);
 
         DB::table('ltusertype')->insert([
-        	'usertype_name' => 'makeupartist'
+        	'usertype_name' => 'Make Up Artist'
         	]);
     }
 }

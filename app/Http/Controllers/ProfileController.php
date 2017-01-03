@@ -7,6 +7,7 @@ use Auth;
 use DB;
 use App\Http\Requests;
 use App\Makeupclass;
+use App\User;
 use App\Makeupworkshop;
 use Request;
 use Validator;
@@ -21,7 +22,7 @@ class ProfileController extends Controller
     
     public function profile($profile_id){
         $owned=1;
-        $profile = DB::table('msusers')->where('id', $profile_id)->first();
+        $profile = User::with('type')->where('id', $profile_id)->first();
         $classowned =  Makeupclass::where('class_ownerid', $profile_id)->get();
         $workshopowned = Makeupworkshop::where('workshop_ownerid', $profile_id)->get();
         if(Auth::user()){
