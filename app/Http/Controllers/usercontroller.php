@@ -18,7 +18,7 @@ class usercontroller extends Controller
     	$email = Request::input('email');
     	$password = Request::input('password');
     	$confPassword = Request::input('confPassword');
-    	$name = Request::input('firstname').Request::input('lastname');;
+    	$name = Request::input('firstname').' '.Request::input('lastname');;
     	$dateofbirth = date("Y-m-d", strtotime(Request::input('dateofbirth')));
     	$gender = Request::input('gender');
     	$city = Request::input('city');

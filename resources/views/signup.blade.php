@@ -45,9 +45,9 @@
 				</div>
 				<div class="input-field col s12 m6 l6">
 					<label>Gender</label></br>
-					<input name="gender" type="radio" id="male" value="male"/>
+					<input name="gender" type="radio" id="male" value="M"/>
       				<label for="male">Male</label>
-      				<input name="gender" type="radio" id="female" value="female"/>
+      				<input name="gender" type="radio" id="female" value="F"/>
       				<label for="female">Female</label>
 				</div>
 			</div>

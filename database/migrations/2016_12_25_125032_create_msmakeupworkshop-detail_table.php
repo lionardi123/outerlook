@@ -17,7 +17,8 @@ class CreateMsmakeupworkshopDetailTable extends Migration
             $table->increments('id');
             $table->integer('workshop_id')->unsigned();
             $table->integer('workshop_participantid')->unsigned();
-            $table ->timestamps();
+            $table->timestamp('created_at')->useCurrent();
+            $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP')); 
             $table->foreign('workshop_id')->references('id')->on('msmakeupworkshop');
             $table->foreign('workshop_participantid')->references('id')->on('msusers');
         });

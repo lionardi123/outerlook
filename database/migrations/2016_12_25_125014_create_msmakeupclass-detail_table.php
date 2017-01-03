@@ -17,7 +17,8 @@ class CreateMsmakeupclassDetailTable extends Migration
             $table->increments('id');
             $table->integer('class_id')->unsigned();
             $table->integer('class_participantid')->unsigned();
-            $table->timestamps();
+            $table->timestamp('created_at')->useCurrent();
+            $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP')); 
             $table->foreign('class_id')->references('id')->on('msmakeupclass');
             $table->foreign('class_participantid')->references('id')->on('msusers');
         });

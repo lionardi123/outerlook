@@ -1,5 +1,9 @@
 @extends('layouts.app')
-
+<?php
+    use App\User;
+    use App\Makeupclass;
+    use App\Makeupworkshop;
+?>
 @section('content')
   <div id="index-banner" class="parallax-container categories-header valign-wrapper">
     <div class="section no-pad-bot">
@@ -59,23 +63,38 @@
             </div>
           </form>
         </div>
-    @if($category=='1')
     <?php
-    use App\Article;
+    $users = User::where([['user_usertypeid','3'],
+                        ['user_city','like','%'.$city.'%'],
+                        ])
+                    ->orderBy('updated_at','desc')
+                    ->get();
+    $makeupclasses = Makeupclass::where('class_city','like','%'.$city.'%')
+                                  ->orderBy('updated_at','desc')
+                                  ->get();
+    $makeupworkshops = Makeupworkshop::where('workshop_city','like','%'.$city.'%')
+                                  ->orderBy('updated_at','desc')
+                                  ->get();
+    $i=1;
     ?>
+    @if($category=='1')
     @foreach($users as $user)     
+        @if($i==1||($i-1)%3==0)
         <div class="col s12 m3 l3 offset-l3 offset-m3">
+        @else
+        <div class="col s12 m3 l3">
+        @endif
           <div class="card small-card">
             <div class="card-image">
-              <img class="max-size" src="{{{asset('/image/cards_profile/$user->id/user_card$i')}}}">
+              <img class="max-size" src="{{{asset("/image/cards_profile/{$user->id}/{$user->user_cardimage}")}}}">
             </div>
             <div class="card-content">
               <div class="card-profile left">
-                <img class="responsive-img" src="{{{asset('/image/round-profile1.png')}}}">
+                <img class="responsive-img circle" src="{{{asset("/image/avatars/{$user->id}/$user->user_avatar")}}}">
               </div>
                <div class="card-profile-text left">
-                  <span class="profile-name">Clara</span></br>
-                  <span class="location gray">Jakarta Selatan</span></br>
+                  <span class="profile-name">{{$user->user_fullname}}</span></br>
+                  <span class="location gray">{{$user->user_city}}</span></br>
                   <div class="rating">
                     <span>&starf;</span><span>&starf;</span><span>&starf;</span><span>&starf;</span><span>&starf;</span>
                   </div>
@@ -83,37 +102,28 @@
             </div>
           </div>
         </div>
+        <?php
+          $i++;
+        ?>
+    @endforeach
+    @elseif($category=='2')
+    @foreach($makeupclasses as $makeupclass)     
+        @if($i==1||($i-1)%3==0)
+        <div class="col s12 m3 l3 offset-l3 offset-m3">
+        @else
         <div class="col s12 m3 l3">
+        @endif
           <div class="card small-card">
             <div class="card-image">
-              <img class="max-size" src="{{{asset('/image/makeup-class2.jpg')}}}">
+              <img class="max-size" src="{{{asset("/image/makeupclass/{$makeupclass->id}/{$makeupclass->class_avatar}")}}}">
             </div>
             <div class="card-content">
               <div class="card-profile left">
-                <img class="responsive-img" src="{{{asset('/image/round-profile1.png')}}}">
-              </div>
-              <div class="card-profile-text left">
-                  <span class="profile-name">Clara</span></br>
-                  <span class="location gray">Jakarta Selatan</span></br>
-                  <div class="rating">
-                    <span>&starf;</span><span>&starf;</span><span>&starf;</span><span>&starf;</span><span>&starf;</span>
-                  </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col s12 m3 l3">
-          <div class="card small-card">
-            <div class="card-image max-size">
-              <img class="max-size" src ="{{{asset('/image/makeup-class3.jpg')}}}">
-            </div>
-            <div class="card-content">
-              <div class="card-profile left">
-                <img class="responsive-img" src="{{{asset('/image/round-profile1.png')}}}">
+                <img class="responsive-img circle" src="{{{asset("/image/avatars/{$makeupclass->owner->id}/{$makeupclass->owner->user_avatar}")}}}">
               </div>
                <div class="card-profile-text left">
-                  <span class="profile-name">Clara</span></br>
-                  <span class="location gray">Jakarta Selatan</span></br>
+                  <span class="profile-name">{{$makeupclass->owner->user_fullname}}</span></br>
+                  <span class="location gray">{{$makeupclass->class_city}}</span></br>
                   <div class="rating">
                     <span>&starf;</span><span>&starf;</span><span>&starf;</span><span>&starf;</span><span>&starf;</span>
                   </div>
@@ -121,6 +131,38 @@
             </div>
           </div>
         </div>
+        <?php
+          $i++;
+        ?>
+    @endforeach
+    @else
+     @foreach($makeupworkshops as $makeupworkshop)     
+        @if($i==1||($i-1)%3==0)
+        <div class="col s12 m3 l3 offset-l3 offset-m3">
+        @else
+        <div class="col s12 m3 l3">
+        @endif
+          <div class="card small-card">
+            <div class="card-image">
+              <img class="max-size" src="{{{asset("/image/makeupworkshop/{$makeupworkshop->id}/{$makeupworkshop->workshop_avatar}")}}}">
+            </div>
+            <div class="card-content">
+              <div class="card-profile left">
+                <img class="responsive-img circle" src="{{{asset("/image/avatars/{$makeupworkshop->owner->id}/{$makeupworkshop->owner->user_avatar}")}}}">
+              </div>
+               <div class="card-profile-text left">
+                  <span class="profile-name">{{$makeupworkshop->owner->user_fullname}}</span></br>
+                  <span class="location gray">{{$makeupworkshop->workshop_city}}</span></br>
+                  <div class="rating">
+                    <span>&starf;</span><span>&starf;</span><span>&starf;</span><span>&starf;</span><span>&starf;</span>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <?php
+          $i++;
+        ?>
     @endforeach
     @endif
       </div>
