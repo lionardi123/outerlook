@@ -46,3 +46,7 @@ dropdown-content li > a, .dropdown-content li > span {
 .dropdown-content{
 	max-height:200px !important;
 }
+#paksa_foto{
+	min-width:297.750px;
+	min-height:339px;
+}

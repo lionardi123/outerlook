@@ -33,7 +33,7 @@
 	<div class="row asd center" style="padding-left: 11.250px; padding-right: 11.250px; border-right-width: 11.250px;">
 		<div class="card small">
 			<div class="card-image waves-effect waves-block waves-light custom-card">
-				<img class="activator" src="{{ asset('image/profile wall.jpg') }}">
+				<img class="responsive activator" src="{{ asset('image/profile wall.jpg') }}">
 			</div>
 		</div>
 	</div>
@@ -42,45 +42,11 @@
 <div class="container">
 	<div class="row">
 		{{-- SECTION LEFT --}}
-		<div class="col s12 m5 l4"> 
-			<ul class="collapsible collection with-header">
-				<li class="collection-header custom-pink1-text"><h5>Workshop Upcoming Schedule</h5></li>
-				<?php for($i=0;$i<10;$i++){ ?>
+		<div class="col s12 m5 l4">
+			<ul class="collapsible collection with-header" data-collapsible="expandable">
 				<li>
-					<div class="collapsible-header">Schedule {{$i}}</div>
-					<div class="collapsible-body grey lighten-3">
-						<p>This is Schedule {{$i}}</p>
-					</div>
+					<img class="responsive-img" id="paksa_foto" src="{{ asset('image/makeupworkshop/'.$Makeupworkshop->id.'/'.$Makeupworkshop->workshop_avatar.'') }}">
 				</li>
-				<?php } ?>
-			</ul>
-			<div class="card-panel" style="height: auto;">
-				<h5 class="custom-pink1-text">Workshop Description</h5>
-				<div class="divider"></div>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis rerum magni ab necessitatibus, non earum nisi tempora animi veritatis facilis fuga cumque mollitia! Sed veritatis totam labore consequatur perferendis eligendi!</p>
-			</div>
-		</div>
-		{{-- SECTION LEFT END --}}
-
-		{{-- SECTION RIGHT START--}}
-        <div class="col s12 m7 l8" style="">
-			<div class="card-panel" style="height: auto;">
-				<h4 class="custom-pink1-text">Events</h4>
-				<div class="carousel carousel-slider center" data-indicators="true">
-					<?php for($i=0;$i<10;$i++){ ?>
-					<div class="carousel-item red white-text" href="#one!">
-						<h2>Event {{$i}}</h2>
-						<p class="white-text">This is Event {{$i}}</p>
-					</div>
-					<?php } ?>
-				</div>
-				<script>
-					$('.carousel.carousel-slider').carousel({full_width: true});
-				</script>
-			</div>
-		</div>
-		<div class="col s12 m7 l8" style="">
-			<ul class="collapsible collection with-header">
 				<li class="collection-header custom-pink1-text"><h5>{{$Makeupworkshop->workshop_name}}</h5></li>
 				@if($owned==0)
 				<li>
@@ -94,15 +60,53 @@
 					</div>
 				</li>
 				@endif
-				<?php for($i=0;$i<10;$i++){ ?>
+			</ul> 
+		</div>
+		{{-- SECTION LEFT END --}}
+
+		{{-- SECTION RIGHT START--}}
+		<div class="col s12 m7 l8" style="">
+			<ul class="collapsible collection with-header" data-collapsible="expandable">
+				<li class="collection-header custom-pink1-text"><h5>Workshop Info</h5></li>
 				<li>
-					<div class="collapsible-header">Menu {{$i}}</div>
+					<div class="collapsible-header">Workshop Schedule</div>
 					<div class="collapsible-body grey lighten-3">
-						<p>This is Menu {{$i}}</p>
+						<?php
+						$timestamp = strtotime($Makeupworkshop->workshop_date);
+
+						$day = date('l', $timestamp);
+						?>
+						<p><b>{{$day}}</b>, <b>{{$Makeupworkshop->workshop_date}}</b></p>
 					</div>
 				</li>
-				<?php } ?>
-			</ul> 
+				<li>
+					<div class="collapsible-header">Workshop Venue</div>
+					<div class="collapsible-body grey lighten-3">
+						<p>{{$Makeupworkshop->workshop_address}}, <b>{{$Makeupworkshop->workshop_city}}</b></p>
+					</div>
+				</li>
+				<li>
+					<div class="collapsible-header">Workshop Quota</div>
+					<div class="collapsible-body grey lighten-3">
+						<p>{{$Makeupworkshop->workshop_quota}} <b>people</b></p>
+					</div>
+				</li>
+				<li>
+					<div class="collapsible-header">Workshop Price</div>
+					<div class="collapsible-body grey lighten-3">
+						<p><b>IDR</b> {{$Makeupworkshop->workshop_price}}</p>
+					</div>
+				</li>
+				<li>
+					<div class="collapsible-header">Workshop Description</div>
+					<div class="collapsible-body grey lighten-3">
+						<p>
+							{{$Makeupworkshop->workshop_description}}<br>
+							<b>Duration</b>: {{$Makeupworkshop->workshop_duration}} Hour
+						</p>
+					</div>
+				</li>
+			</ul>
 		</div>
 		{{-- SECTION RIGHT END--}}
 	</div>

@@ -89,18 +89,26 @@
 			{{-- COLLECTION MAKEUP-CLASS START --}}
 			<ul class="collapsible collection with-header">
 				<li class="collection-header custom-pink1-text"><h5>Make-upClass</h5></li>
+				@foreach($classowned as $class)
 				<li>
-					<div class="collapsible-header">Make-Up Class Name</div>
+					<div class="collapsible-header">{{$class->class_name}}</div>
 					<div class="collapsible-body grey lighten-3">
 						<p>
 							@if($owned==0)
 							<a class="secondary-content custom-pink1-text"><i class="material-icons">delete</i></a>
 							<a class="secondary-content custom-pink1-text" href="#class1"><i class="material-icons">edit</i></a>
 							@else
-							<a class="secondary-content custom-pink1-text"><i class="material-icons">input</i></a>
+							<a href="/profileclass/{{$class->id}}" class="secondary-content custom-pink1-text"><i class="material-icons">input</i></a>
 							@endif
-							<b>Class Date</b><br>
-							Class Description
+							<?php
+								$timestamp1 = strtotime($class->class_startdate);
+								$timestamp2 = strtotime($class->class_enddate);
+
+								$day1 = date('l', $timestamp1);
+								$day2 = date('l', $timestamp2);
+							?>
+							<b>{{$day1}}</b>, <b>{{$class->class_startdate}}</b><br>until<br><b>{{$day2}}</b>, <b>{{$class->class_enddate}}</b><br><br>
+							{{$class->class_description}}
 						</p>
 					</div>
 					@if($owned==0)
@@ -112,7 +120,7 @@
 									<div class="row">
 										<div class="input-field col s12">
 											<input id="txtClassname" name="txtClassname" type="text" class="validate">
-											<label for="txtClassname">Class Name</label>
+											<label for="txtClassname">{{$class->class_name}}</label>
 										</div>
 										<div class="input-field col s12">
 											<input id="txtClassprice" name="txtClassprice" type="number" class="validate">
@@ -146,14 +154,16 @@
 					</div>
 					@endif
 				</li>
+				@endforeach
 			</ul>
 			{{-- COLLECTION MAKEUP-CLASS END --}}
 			
 			{{-- COLLECTION MAKEUP-WORKSHOP START --}}
 			<ul class="collapsible collection with-header">
 				<li class="collection-header custom-pink1-text"><h5>Make-Up Workshop</h5></li>
+				@foreach($workshopowned as $workshop)
 				<li>
-					<div class="collapsible-header">Make-Up Workshop Name</div>
+					<div class="collapsible-header">{{$workshop->workshop_name}}</div>
 					<div class="collapsible-body grey lighten-3">
 						<p>
 							@if($owned==0)
@@ -161,10 +171,15 @@
 							<a class="secondary-content custom-pink1-text" href="#workshop1"><i class="material-icons">edit</i></a>
 							
 							@else
-							<a class="secondary-content custom-pink1-text"><i class="material-icons">input</i></a>
+							<a href="/profileworkshop/{{$workshop->id}}" class="secondary-content custom-pink1-text"><i class="material-icons">input</i></a>
 							@endif
-							<b>Workshop Date</b><br>
-							Workshop Description
+							<?php
+								$timestamp = strtotime($workshop->workshop_date);
+
+								$day = date('l', $timestamp);
+							?>
+							<b>{{$day}}, {{$workshop->workshop_date}}</b><br>
+							{{$workshop->workshop_description}}
 						</p>
 					</div>
 					@if($owned==0)
@@ -176,7 +191,7 @@
 									<div class="row">
 										<div class="input-field col s12">
 											<input id="txtWorkshopname" name="txtWorkshopname" type="text" class="validate">
-											<label for="txtWorkshopname">Workshop Name</label>
+											<label for="txtWorkshopname">{{$workshop->workshop_name}}</label>
 										</div>
 										<div class="input-field col s12">
 											<input id="txtWorkshopdate" name="txtWorkshopdate" type="date" class="datepicker">
@@ -196,6 +211,7 @@
 					</div>
 					@endif
 				</li>
+				@endforeach
 			</ul>
 			{{-- COLLECTION MAKEUP-WORKSHOP END --}}
 		</div>

@@ -87,7 +87,7 @@
                     <ul id="dropdown2" class="dropdown-content custom-pink1">
                         <li><a class="white-text" href="{{url('/logout')}}">Sign Out</a></li>
                     </ul>
-                    <a class="white-text left dropdown-button" href="#!" data-activates="dropdown2">{{Auth::user()->user_fullname}}<i class="right"></i></a>
+                    <a class="white-text left dropdown-button" href="profile/{{Auth::user()->id}}" data-activates="dropdown2">{{Auth::user()->user_fullname}}<i class="right"></i></a>
                     <li>
                         
                     </li>

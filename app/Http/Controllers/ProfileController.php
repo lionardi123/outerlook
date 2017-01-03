@@ -18,16 +18,18 @@ class ProfileController extends Controller
     {
 
     }
-
+    
     public function profile($profile_id){
         $owned=1;
         $profile = DB::table('msusers')->where('id', $profile_id)->first();
+        $classowned =  Makeupclass::where('class_ownerid', $profile_id)->get();
+        $workshopowned = Makeupworkshop::where('workshop_ownerid', $profile_id)->get();
         if(Auth::user()){
             if(Auth::user()->id == $profile->id){
                 $owned=0;
             }
         }
-        return view('profile', ['profile' => $profile, 'owned' => $owned]);
+        return view('profile', ['profile' => $profile, 'owned' => $owned, 'classowned' => $classowned, 'workshopowned' => $workshopowned                   ]);
     }
 
     public function profileclass($profileclass_id){
