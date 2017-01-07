@@ -15,6 +15,14 @@
 
 }
 
+.custom-orange{
+	background-color: #B88A6E !important;
+}
+
+.custom-orange-text{
+	color: #B88A6E !important;
+}
+
 .black-text{
 	color:black;
 }
@@ -25,6 +33,16 @@ a .black-text:hover{
 
 .dropdown-content li {
 	clear:none!important;
+}
+
+
+#paksa_logo{
+	margin-top:5px;
+	max-height:70px !important;
+}	
+
+#paksa_logo-link{
+	max-height:64px !important;
 }	
 
 body{

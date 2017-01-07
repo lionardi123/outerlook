@@ -69,6 +69,9 @@
             <div class="container">
                 <ul class="left hide-on-med-and-down">
                     <li>
+                        <a id="paksa_logo-link" class="white-text" href=""><img id="paksa_logo" src="{{{ asset('/image/headlogo.png') }}}"></a>
+                    </li>
+                    <li>
                         <a class="white-text" href="{{url('/')}}">Home</a>
                     </li>
                     <li>
