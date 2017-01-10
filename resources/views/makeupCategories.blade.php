@@ -93,7 +93,7 @@
                 <img class="responsive-img circle" src="{{{asset("/image/avatars/{$user->id}/$user->user_avatar")}}}">
               </div>
                <div class="card-profile-text left">
-                  <span class="profile-name">{{$user->user_fullname}}</span></br>
+                  <a href="{{url('/profile/'.$user->id)}}"><span class="profile-name">{{$user->user_fullname}}</span></a></br>
                   <span class="location gray">{{$user->user_city}}</span></br>
                   <div class="rating">
                     <span>&starf;</span><span>&starf;</span><span>&starf;</span><span>&starf;</span><span>&starf;</span>
@@ -122,7 +122,7 @@
                 <img class="responsive-img circle" src="{{{asset("/image/avatars/{$makeupclass->owner->id}/{$makeupclass->owner->user_avatar}")}}}">
               </div>
                <div class="card-profile-text left">
-                  <span class="profile-name">{{$makeupclass->owner->user_fullname}}</span></br>
+                  <a href="{{url('/profileclass/'.$makeupclass->id)}}"><span class="profile-name">{{$makeupclass->owner->user_fullname}}</span></br>
                   <span class="location gray">{{$makeupclass->class_city}}</span></br>
                   <div class="rating">
                     <span>&starf;</span><span>&starf;</span><span>&starf;</span><span>&starf;</span><span>&starf;</span>
@@ -151,7 +151,7 @@
                 <img class="responsive-img circle" src="{{{asset("/image/avatars/{$makeupworkshop->owner->id}/{$makeupworkshop->owner->user_avatar}")}}}">
               </div>
                <div class="card-profile-text left">
-                  <span class="profile-name">{{$makeupworkshop->owner->user_fullname}}</span></br>
+                  <a href="{{url('/profileworkshop/'.$makeupworkshop->id)}}"><span class="profile-name">{{$makeupworkshop->owner->user_fullname}}</span></a></br>
                   <span class="location gray">{{$makeupworkshop->workshop_city}}</span></br>
                   <div class="rating">
                     <span>&starf;</span><span>&starf;</span><span>&starf;</span><span>&starf;</span><span>&starf;</span>
