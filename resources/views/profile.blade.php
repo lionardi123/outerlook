@@ -26,6 +26,11 @@
 	.card .card-content .card-title {
 		line-height: 2rem;
 	}
+
+	.available:hover{
+		background-color: grey;
+		cursor: pointer;
+	}
 </style>
 <script>
 	$(document).ready(function(){
@@ -100,7 +105,7 @@
 			<div class="card">
 				<table border=3 cellspacing=3 cellpadding=3> 
 					<tr>
-						<td colspan="7" align=center><b>December 2016</b></td> 
+						<td colspan="7" align=center style="text-align: center;"><b>December 2016</b></td> 
 					</tr>
 					<tr> 
 						<td align=center><b>Sun</b></td>
@@ -116,45 +121,45 @@
 						<td class="grey" align=center></td>
 						<td class="grey" align=center></td>
 						<td class="grey" align=center></td>
-						<td align=center>1</td>
-						<td align=center>2</td>
-						<td align=center>3</td>
+						<td class="available" align=center>1</td>
+						<td class="available" align=center>2</td>
+						<td class="available" align=center>3</td>
 					</tr>
 					<tr> 
-						<td align=center>4</td>
-						<td align=center>5</td>
-						<td align=center>6</td>
-						<td align=center>7</td>
-						<td align=center>8</td>
-						<td align=center>9</td>
+						<td class="grey" align=center>4</td>
+						<td class="available" align=center>5</td>
+						<td class="available" align=center>6</td>
+						<td class="grey" align=center>7</td>
+						<td class="grey" align=center>8</td>
+						<td class="grey" align=center>9</td>
 						<td class="custom-pink1" align=center>10</td>
 					</tr>
 					<tr> 
-						<td align=center>11</td>
-						<td align=center>12</td>
-						<td align=center>13</td>
-						<td align=center>14</td>
-						<td align=center>15</td>
-						<td align=center>16</td>
-						<td align=center>17</td>
+						<td class="grey" align=center>11</td>
+						<td class="grey" align=center>12</td>
+						<td class="available" align=center>13</td>
+						<td class="grey" align=center>14</td>
+						<td class="grey" align=center>15</td>
+						<td class="grey" align=center>16</td>
+						<td class="grey" align=center>17</td>
 					</tr>
 					<tr> 
-						<td align=center>18</td>
-						<td align=center>19</td>
-						<td align=center>20</td>
-						<td align=center>21</td>
-						<td align=center>22</td>
-						<td align=center>23</td>
-						<td align=center>24</td>
+						<td class="available" align=center>18</td>
+						<td class="grey" align=center>19</td>
+						<td class="grey" align=center>20</td>
+						<td class="available" align=center>21</td>
+						<td class="grey" align=center>22</td>
+						<td class="available" align=center>23</td>
+						<td class="grey" align=center>24</td>
 					</tr>
 					<tr> 
-						<td align=center>25</td>
-						<td align=center>26</td>
-						<td align=center>27</td>
-						<td align=center>28</td>
-						<td align=center>29</td>
-						<td align=center>30</td>
-						<td align=center>31</td>
+						<td class="available" align=center>25</td>
+						<td class="grey" align=center>26</td>
+						<td class="grey" align=center>27</td>
+						<td class="available" align=center>28</td>
+						<td class="available" align=center>29</td>
+						<td class="grey" align=center>30</td>
+						<td class="grey" align=center>31</td>
 					</tr>
 					<tr> 
 						<td class="grey" align=center>1</td>
@@ -226,7 +231,7 @@
 							<a class="secondary-content custom-pink1-text"><i class="material-icons">delete</i></a>
 							<a class="secondary-content custom-pink1-text" href="#class1"><i class="material-icons">edit</i></a>
 							@else
-							<a href="/profileclass/{{$class->id}}" class="secondary-content custom-pink1-text"><i class="material-icons">input</i></a>
+							<a href="{{url("profileclass/$class->id")}}" class="secondary-content custom-pink1-text"><i class="material-icons">input</i></a>
 							@endif
 							<?php
 							$timestamp1 = strtotime($class->class_startdate);
@@ -299,7 +304,7 @@
 							<a class="secondary-content custom-pink1-text" href="#workshop1"><i class="material-icons">edit</i></a>
 							
 							@else
-							<a href="/profileworkshop/{{$workshop->id}}" class="secondary-content custom-pink1-text"><i class="material-icons">input</i></a>
+							<a href="{{url("profileclass/$workshop->id")}}" class="secondary-content custom-pink1-text"><i class="material-icons">input</i></a>
 							@endif
 							<?php
 							$timestamp = strtotime($workshop->workshop_date);
