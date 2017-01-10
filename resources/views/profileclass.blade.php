@@ -69,6 +69,13 @@
 		<div class="col s12 m7 l8" style="">
 			<ul class="collapsible collection with-header" data-collapsible="expandable">
 				<li class="collection-header custom-pink1-text"><h5>Class Info</h5></li>
+				
+				<li>
+					<div class="collapsible-header">Class Owner</div>
+					<div class="collapsible-body grey lighten-3">
+						<p><a href="{{url('/profile/'.$Makeupclass->owner->id)}}"><b>{{$Makeupclass->owner->user_fullname}}</b></a></p>
+					</div>
+				</li>
 				<li>
 					<div class="collapsible-header">Class Available Schedule</div>
 					<div class="collapsible-body grey lighten-3">

@@ -69,6 +69,12 @@
 			<ul class="collapsible collection with-header" data-collapsible="expandable">
 				<li class="collection-header custom-pink1-text"><h5>Workshop Info</h5></li>
 				<li>
+					<div class="collapsible-header">Class Owner</div>
+					<div class="collapsible-body grey lighten-3">
+						<p><a href="{{url('/profile/'.$Makeupworkshop->owner->id)}}"><b>{{$Makeupworkshop->owner->user_fullname}}</b></a></p>
+					</div>
+				</li>
+				<li>
 					<div class="collapsible-header">Workshop Schedule</div>
 					<div class="collapsible-body grey lighten-3">
 						<?php
