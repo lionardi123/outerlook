@@ -43,7 +43,7 @@
 </div>
 <div class="container">
 	<div class="section">
-		<div class="about-us">
+		<div class="about-us" style="display:inline-block">
 			<h1 class="center bold">About Us<span class="dot">.</span></h1>
 			<div id="about-us-text" class="half-width left">
 				<p class="flow-text italic small">I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me and you can start adding your own content and make changes to the font. I’m a great place for you to tell a story and let your users know a little more about you.</br></br>
@@ -56,35 +56,46 @@
 		</div>
 	</div>
 </div>
-<div class="container">
-	<div class="section">
-		<div id="articles">
-			<h1 class="center bold">Articles<span class="dot">.</span></h1>
-			<?php 
-			use App\Article;
-			$i = 1;
-			?>
-			<div class="row">
-			@for($i=1;$i<=3;$i++)
-			<?php
-			$article = Article::whereId($i)->first();
-			?>
-			<div class="col s12 m4 l4">
-				<a href="{{url("/article/$i")}}">
-					<div class="card">
-						<div class="card-image index-card">
-							<img class="index-card" src="{{{asset("/image/$article->id/$article->article_imagecard")}}}">
-							<div class="card-titles title-opacity"><span>{{$article->article_title}}</span><span class="read-more">Read more>></span>
+<br>
+<br>
+<br>
+<br>
+<div class="parallax-container">
+	<div class="container">
+		<div class="section">
+			<div id="articles">
+				<h1 class="center bold" style="color:black">Articles<span class="dot">.</span></h1>
+				<?php 
+				use App\Article;
+				$i = 1;
+				?>
+				<div class="row">
+				@for($i=1;$i<=3;$i++)
+				<?php
+				$article = Article::whereId($i)->first();
+				?>
+				<div class="col s12 m4 l4">
+					<a href="{{url("/article/$i")}}">
+						<div class="card">
+							<div class="card-image index-card">
+								<img class="index-card" src="{{{asset("/image/$article->id/$article->article_imagecard")}}}">
+								<div class="card-titles title-opacity"><span class="text-responsive">{{$article->article_title}}</span><span class="read-more">Read more>></span>
+								</div>
 							</div>
 						</div>
-					</div>
-				</a>
-			</div>	
-			@endfor
+					</a>
+				</div>	
+				@endfor
+				</div>
 			</div>
 		</div>
 	</div>
+	<div class="parallax"><img src="{{asset('image/article-content1.jpg')}}"></div>
 </div>
+<br>
+<br>
+<br>
+<br>
 <div id="contact" class="container peach full-width">
 	<div class="section">
 		<div class="form white center">
@@ -121,6 +132,14 @@
 						<textarea id="message" class="materialize-textarea"></textarea>
 						<label for="message">Message</label>
 						<button class="right btn custom-pink1" type="submit">Send</button>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col s12 center">
+						<div class="img">
+							<img style="max-height: 40px;" src="{{asset('image/instagram.png')}}">
+							<img style="max-height: 40px;" class="responsive-img" src="{{asset('image/facebook.png')}}">
+						</div>
 					</div>
 				</div>
 			</form>  
