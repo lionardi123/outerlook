@@ -69,7 +69,7 @@
             <div class="container">
                 <ul class="left hide-on-med-and-down">
                     <li>
-                        <a id="paksa_logo-link" class="white-text" href="{{url('/')}}"><img id="paksa_logo-link" class="responsive-img"  src="{{{ asset('/image/headlogo.png') }}}"></a>
+                        <a id="paksa_logo-link" class="white-text" href="{{url('/')}}"><img id="paksa_logo-link" class="responsive-img"  src="{{{ asset('/image/headlogo1.png') }}}"></a>
                     </li>
                 </ul>
                 <ul class="right hide-on-med-and-down">
