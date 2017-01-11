@@ -107,6 +107,9 @@
 			<div class="contact-desc">
 				<span class="italic">0821 . 1398 . 3824</span>
 			</div>
+			<div class="contact-desc">
+				<span class="italic">line : @outerlookid</span>
+			</div>
 			<hr> 
 			<form class="contact-us left-align">
 				<div class="row">

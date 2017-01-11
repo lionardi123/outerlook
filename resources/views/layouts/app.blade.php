@@ -69,16 +69,19 @@
             <div class="container">
                 <ul class="left hide-on-med-and-down">
                     <li>
-                        <a id="paksa_logo-link" class="white-text" href=""><img id="paksa_logo" src="{{{ asset('/image/headlogo.png') }}}"></a>
+                        <a id="paksa_logo-link" class="white-text" href=""><img id="paksa_logo-link" class="responsive-img"  src="{{{ asset('/image/headlogo.png') }}}"></a>
                     </li>
-                    <li>
+                </ul>
+                <ul class="right hide-on-med-and-down">
+                    <!--<li>
                         <a class="white-text" href="{{url('/')}}">Home</a>
+                    </li>-->
+                    <li>
+                        <a class="white-text" href="#">Term & Conditions</a>
                     </li>
                     <li>
                         <a class="white-text" href="#">Book Online</a>
                     </li>
-                </ul>
-                <ul class="right hide-on-med-and-down">
                     @if(Auth::guest())
                     <li>
                         <a class="white-text" href="#modal1">Sign In</a>
