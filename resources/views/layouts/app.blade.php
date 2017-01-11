@@ -69,7 +69,7 @@
             <div class="container">
                 <ul class="left hide-on-med-and-down">
                     <li>
-                        <a id="paksa_logo-link" class="white-text" href=""><img id="paksa_logo-link" class="responsive-img"  src="{{{ asset('/image/headlogo.png') }}}"></a>
+                        <a id="paksa_logo-link" class="white-text" href="{{url('/')}}"><img id="paksa_logo-link" class="responsive-img"  src="{{{ asset('/image/headlogo.png') }}}"></a>
                     </li>
                 </ul>
                 <ul class="right hide-on-med-and-down">
@@ -93,7 +93,7 @@
                     <ul id="dropdown2" class="dropdown-content custom-pink1">
                         <li><a class="white-text" href="{{url('/logout')}}">Sign Out</a></li>
                     </ul>
-                    <a class="white-text left dropdown-button" href="profile/{{Auth::user()->id}}" data-activates="dropdown2">{{Auth::user()->user_fullname}}<i class="right"></i></a>
+                    <a class="white-text left dropdown-button" href="{{url("/profile/".Auth::user()->id."")}}" data-activates="dropdown2">{{Auth::user()->user_fullname}}<i class="right"></i></a>
                     <li>
                         
                     </li>

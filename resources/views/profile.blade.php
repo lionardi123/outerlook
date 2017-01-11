@@ -182,7 +182,7 @@
 				<h4 class="custom-pink1-text">Portfolio</h4>
 				<div class="carousel carousel-slider center" data-indicators="true">
 					<div class="carousel-fixed-item center">
-						<a class="btn waves-effect custom-pink1 white-text darken-text-2">Book</a>
+						<a href="{{url("/booking")}}" class="btn waves-effect custom-pink1 white-text darken-text-2">Book</a>
 					</div>
 					<div class="carousel-item red white-text" href="#one!">
 						<h2>First Panel</h2>

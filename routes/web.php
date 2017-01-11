@@ -37,6 +37,7 @@ Route::group(['middleware' =>'guest'],function(){
 Route::group(['middleware' =>'auth'],function(){
 	Route::post('/article/{article}/edit','ArticleController@edit');
 	Route::get('/logout','logincontroller@dologout');
+	Route::get('/booking','Pagescontroller@booking');
 });
 
 Route::post('/dologin','logincontroller@dologin');

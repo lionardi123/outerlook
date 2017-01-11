@@ -37,4 +37,8 @@ class PagesController extends Controller
        $city = Request::input('city');
        return view('/makeupCategories',compact('city','category'));
     }
+
+    public function booking(){
+        return view('booking');
+    }
 }
